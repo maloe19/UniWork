@@ -1,6 +1,27 @@
 Forside
+	Projekttype: not in collaboration with a company, but choose to work on a sdu theme
+	Titel på projekt: Human-robot interaction data visualization in IoT environments 
+	Navne på studerende: Martin Kim Løvborg
+	Sdu nr. eller eksamensnr.:
+	Måned og år: 06(juni),2022
+	Navne på vejledere: Mahyar
 Indholdsfortegnelse
 Abstract
+	Denne report handler om at visualiserer noget spatel data fra sdu industry 4.0 i et IoT miljø, 
+	med fokus på user-centered development og design(UCD) via human-robot interaction (HRI). 
+	Reporten prøver at opnå en undersøgelse for påvirkningn af UCD på HRI kan gavne valg og 
+	hvad og hvordan data visualisering kan bringe på bordet af fordele og hvilke ulemper der
+	kan være.
+	tools(matplotlib) and terms(HITL)
 Intro
 Litterature
 Background
+Requirements
+Analysis
+Design
+Implementation
+Test
+Discussion/perspektiviring
+Conclusion
+Appendix
+References
