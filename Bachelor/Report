@@ -16,9 +16,12 @@ Abstract
 	UCD metoden brugerevaluering for at få det user-centered aspekt med i projektet.
 	Udover overstående vil der også kommes ind på human-in-the-loop(HITL) og internet of behavior(IoB).
 Intro
+	Effectiveness is always something that is strives for, especially because it can save both money and time, in this report the situation is
 Litterature
 	Papers and paper analysis
 Background
+	The student of this report that has a background in software engineering will use human-robot interaction (HRI), data visualization(dataVis) and internet of things(IoT)
+	interdisciplinary to improve data visualization (interface) for human decision making with user centered design strategies. Because in a IoT enviroment with human-robot interaction (HRI), the human acts like operators and have to make decisions based on what the robots gather of information and data, either by its action with its actuators (such as agents) or on what it detects from its sensors. Example of a agent could be a robot arm that pick up item, moves them to another place and drop them off.
 Requirements
 	Table for funtionel and non-functionel with ID - Name - Description - MoSCoW
 Analysis
