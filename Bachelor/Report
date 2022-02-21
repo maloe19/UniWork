@@ -5,7 +5,20 @@ Forside
 	Sdu number or examnumber: 373685 or 481260
 	Month and year: 06(june),2022
 	Name of guidance counselor: Mahyar Tourchi Moghaddam
-Indholdsfortegnelse
+Table of content
+	Abstract 1 
+	Introduction 2
+	Litterature 3
+	Background 4
+	Requirements 5-6
+	Analysis 7-8
+	Design 9-10 
+	Implementation 11-12
+	Test 13-14
+	Discussion/perspektiviring 15-16
+	Conclusion 17-17,5
+	Appendix 17,5-18
+	References 19-20
 Abstract
 	Denne report handler om at visualiserer noget spatel data fra sdu industry 4.0 i et internet of things(IoT) miljø, 
 	med fokus på user-centered development og design(UCD) via human-robot interaction (HRI). 
@@ -15,8 +28,10 @@ Abstract
 	Der vil blive brugt matplotlib som visualiserings værktøj til at få ønskede resultater og 
 	UCD metoden brugerevaluering for at få det user-centered aspekt med i projektet.
 	Udover overstående vil der også kommes ind på human-in-the-loop(HITL) og internet of behavior(IoB).
-Intro
-	Effectiveness is always something that is strives for, especially because it can save both money and time, in this report the situation is
+Introduction
+	Effectiveness is always something that is strives for, especially because it can save both money and time, in this report the situation is to design a interface that visualize robot collected data to get a better understanding. The goal of the report is to improve the data quality displayed on a screen for humans to make more sufficient desicions.
+		All this in collaboration the UCD 
+		Måske noget med IoT teori and komme ind på analyse af HITL og IoB
 Litterature
 	Papers and paper analysis
 Background
@@ -25,6 +40,14 @@ Background
 	Because in a IoT enviroment with human-robot interaction (HRI), the human acts like operators and have to make decisions based on what
 	the robots gather of information and data, either by its action with its actuators (such as agents) or on what it detects from its sensors. 
 	Example of a agent could be a robot arm that pick up item, moves them to another place and drop them off.
+
+	Research of this topic have been made in the paper review and other litteture(e.g. books) to get a better understanding of the subject. 
+	There was especially two works that stuck out of all of them, these were the paper "Connecting Human-Robot interaction and data visualization" 
+	and the book "Handbook of data visualization". These 2 helped a lot in the research apartment of this report/projects to get the right knowledge.
+	The book was a really good introduction to the main topic which is data visualization, with the basic, while the paper invovled HRI into the mixed, 
+	which was a good way to see and be shown an example and how the two topic could associate and work together (interdisciplinary) with each other.
+
+		UCD is what is new to this field of work (contribution)
 Requirements
 	Table for funtionel and non-functionel with ID - Name - Description - MoSCoW
 Analysis
