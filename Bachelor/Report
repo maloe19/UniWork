@@ -37,7 +37,6 @@ Introduction
 	will be used to get the desired requirements.
 
 		Måske noget med IoT teori and komme ind på analyse af HITL og IoB
-		XOVIS API and use
 		Inspiration fra contract teori om dataVis og HRI
 		opgaven og solution
 		evaluation
@@ -62,8 +61,16 @@ Background
 	This report will further expand the area of HRI and dataVis with the contribution of the UCD method, this is what this report will bring 
 	of things new to the field of work. The method in use will be interview and with that try to get the dataVis more suited for the user.
 
-		XOVIS API and use
-		new things to learn: IOT IOB HRI, HITL
+	The given data comes from a technology named XOVIS, which is a person tracking technology, were SDU industry lab 4.0 have used in their robots
+	to collect the certian data. The technology is based on network configuration, since a user have to manage the the sensors on a network. For the 
+	hardware part, it has 2 holes where the sensors(cameras) are placed. The XOVIS technology is easy to integrate with 3rd party applications, 
+	and the interaction platform with its sensors is simple to use, and the flexible architecture allows many functionalities. All this with its
+	REST API(enable RESTful request and notification interaction) and PUSH API. With XOVIS the raw data from the sensor can be access and comes out
+	in XML format.
+
+	Of new things to learn there is IoT, IoB, HRI and HITL, mainly IoT and HRI since they are ones of the main topics in this project. To help learn
+	these new topics, research need to be done with websites, papers and books. Papers will be focus on and the same case is for secondary topic HITL,
+	for IoB which is somewhat of a tertiary topic websites will be used for its research.
 
 Requirements
 	Table for funtionel and non-functionel with ID - Name - Description - MoSCoW
