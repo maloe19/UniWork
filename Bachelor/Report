@@ -36,12 +36,21 @@ Introduction
 	who have given the data, and maybe will use the interface made by the student for this project. In this project interviews 
 	will be used to get the desired requirements.
 
-		Måske noget med IoT teori and komme ind på analyse af HITL og IoB
-		Inspiration fra contract teori om dataVis og HRI
-		opgaven og solution
-		evaluation
+	About dataVis, it is data illustrated with e.g graphs. When illustrating data, it can be done in a static and or dynamic(/interactive) way. 
+	The static way is just specific chosen data illustrated, while dynamic(/interactive) is the same at basis, but with dynamic(/interactive)
+	it can be manipulated by something like sorting. What dataVis is used for and good at is human decision making, since human react better
+	to visuals(a picture says more than a 1000 words).
+	What this report and the whole report try to accomplish is in short visualization of some data with specified aspects like making decisions
+	in IoT environments. The following questions will contribute to that course.
+		How to visualize the given data in such a way it helps decision makers? 
+		How to incorporate user-centered design in this project? 
+		What are the advantages and disadvantages of data visualization?	
+	How the student will solve the problem and find a preferable solution is by using a tool found in the tool selection(literature) for the visualization part
+	and with a UCD user evaluation to guide the visualization.
 
-Litterature
+		Måske noget med IoT teori and komme ind på analyse af HITL og IoB, HRI
+
+Literature
 	Papers and paper analysis
 Background
 	The student of this report that has a background in software engineering will use human-robot interaction (HRI), data visualization(dataVis) 
