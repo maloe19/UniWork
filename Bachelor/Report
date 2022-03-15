@@ -48,7 +48,14 @@ Introduction
 	How the student will solve the problem and find a preferable solution is by using a tool found in the tool selection(literature) for the visualization part
 	and with a UCD user evaluation to guide the visualization.
 
-		Måske noget med IoT teori and komme ind på analyse af HITL og IoB, HRI
+	IoT is physical things like sensors that can communicate over networks or the internet, and thereby connect to systems and or devices. In this case 
+	the physicals things are sensors that are attached to a robot, the sensors will thereso collect some data which will be transfered over a network to
+	a system, which the student will design to visualize this data.
+	IoB is related to IoT, but are different because it lean more into the behavior side of things, by that it means the human/users behavior towards the
+	technology and the data that comes out of it.
+	HRI is the study of how humans and robots interact between each other, it has root in HCI(human computer interaction) where it have got some contributions from.
+	The definition of HITL is model that requires interaction from a human. HITL is close and referred to as interactive simulation, which is a simulation often physical
+	that includes a human operator in it.
 
 Literature
 	Papers and paper analysis
