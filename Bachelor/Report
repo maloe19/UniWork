@@ -45,22 +45,24 @@ Introduction
 		How to visualize the given data in such a way it helps decision makers? 
 		How to incorporate user-centered design in this project? 
 		What are the advantages and disadvantages of data visualization?	
-	How the student will solve the problem and find a preferable solution is by using a tool found in the tool selection(literature) for the visualization part
-	and with a UCD user evaluation to guide the visualization.
+	How the student will solve the problem and find a preferable solution is by using a tool found in the tool selection(literature) 
+	for the visualization part and with a UCD user evaluation to guide the visualization.
 
-	IoT is physical things like sensors that can communicate over networks or the internet, and thereby connect to systems and or devices. In this case 
-	the physicals things are sensors that are attached to a robot, the sensors will thereso collect some data which will be transfered over a network to
-	a system, which the student will design to visualize this data.
-	IoB is related to IoT, but are different because it lean more into the behavior side of things, by that it means the human/users behavior towards the
-	technology and the data that comes out of it.
-	HRI is the study of how humans and robots interact between each other, it has root in HCI(human computer interaction) where it have got some contributions from.
-	The definition of HITL is model that requires interaction from a human. HITL is close and referred to as interactive simulation, which is a simulation often physical
-	that includes a human operator in it.
+	IoT is physical things like sensors that can communicate over networks or the internet, and thereby connect to systems and or devices. 
+	In this case the physicals things are sensors that are attached to a robot, the sensors will thereso collect some data which will be 
+	transfered over a network to a system, which the student will design to visualize this data.
+	IoB is related to IoT, but are different because it lean more into the behavior side of things, by that it means the human/users behavior 
+	towards the technology and the data that comes out of it.
+	HRI is the study of how humans and robots interact between each other, it has root in HCI(human computer interaction) where it have got some 
+	contributions from.
+	The definition of HITL is model that requires interaction from a human. HITL is close and referred to as interactive simulation, which is a 
+	simulation often physical that includes a human operator in it.
 Literature
 	Papers and paper analysis
 Background
 	The student of this report that has a background in software engineering will use human-robot interaction (HRI), data visualization(dataVis) 
-	and internet of things(IoT) interdisciplinary to improve data visualization (interface) for human decision making with user centered design strategies. 
+	and internet of things(IoT) interdisciplinary to improve data visualization (interface) for human decision making with user centered 
+	design strategies. 
 	Because in a IoT enviroment with human-robot interaction (HRI), the human acts like operators and have to make decisions based on what
 	the robots gather of information and data, either by its action with its actuators (such as agents) or on what it detects from its sensors. 
 	Example of a agent could be a robot arm that pick up item, moves them to another place and drop them off.
@@ -68,8 +70,8 @@ Background
 	Research of this topic have been made in the paper review and other litterature(e.g. books) to get a better understanding of the subject. 
 	There was especially two works that stuck out of all of them, these were the paper "Connecting Human-Robot interaction and data visualization" 
 	and the book "Handbook of data visualization". These 2 helped a lot in the research apartment of this report/projects to get the right knowledge.
-	The book was a really good introduction to the main topic which is data visualization, with the basic, while the paper invovled HRI into the mixed, 
-	which was a good way to see and be shown an example and how the two topic could associate and work together (interdisciplinary) with each other.
+	The book was a really good introduction to the main topic which is data visualization, with the basic, while the paper invovled HRI into the 
+	mixed, which was a good way to see and be shown an example and how the two topic could associate and work together (interdisciplinary) with each other.
 	Further research influence can be find mainly under the litterature section where the paper review/paper analysis have its place and some more at 
 	the references section.
 
@@ -84,8 +86,8 @@ Background
 	in XML format.
 
 	Of new things to learn there is IoT, IoB, HRI and HITL, mainly IoT and HRI since they are ones of the main topics in this project. To help learn
-	these new topics, research need to be done with websites, papers and books. Papers will be focus on and the same case is for secondary topic HITL,
-	for IoB which is somewhat of a tertiary topic websites will be used for its research.
+	these new topics, research need to be done with websites, papers and books. Papers will be focus on and the same case is for secondary topic 
+	HITL, for IoB which is somewhat of a tertiary topic websites will be used for its research.
 Requirements
 	This section will mainly be occupied be 2 tables, 1 for functionel requiurements and 1 for non-functionel requirements, 
 	each table will have an ID for the requirement, an given name and a short description of the requirement, finally the requirement
@@ -97,17 +99,19 @@ Analysis
 	kind of data was given and how it will affect the rest of the process, there will also be shone light of other relevant aspects of the data.
 Design
 	The design section will be about structuring the requirements and the decision made for the visualization of the data. Which will be influenced
-	by the people who gave it in the user evaluation, and what enviroment the data comes from while what situation the people need the visualization for.
+	by the people who gave it in the user evaluation, and what enviroment the data comes from while what situation the people need the 
+	visualization for.
 Implementation
 	Implementation is the section where the execution of the code of the visualization will be showcased, with all the consideration 
-	that was in the process of making it. All this with the usage of the chosen technology, that were pick out in the tool selection in the literature section above.
+	that was in the process of making it. All this with the usage of the chosen technology, that were pick out in the tool selection 
+	in the literature section above.
 Test
 	The section of test will show the trials the interface have gone through to check the performance of the implementation of the visualization. 
 	2 kinds of tests will be used, usability test, where a user will try the interface, review it and give feedback and code-based test with 2 types 
 	unit-test with JUnit and acceptance test which is behavior driven.
 Reflection
-	Reflection section, here there will be reflected on what to do futher beyond if given more time and how the project progress went, like pros, cons,
-	what went well and what didn't go so good.
+	Reflection section, here there will be reflected on what to do futher beyond if given more time and how the project progress went, like pros, 
+	cons, what went well and what didn't go so good.
 Conclusion
 Appendix
 References
