@@ -15,7 +15,7 @@ Table of content
 	Design 9-10 
 	Implementation 11-12
 	Test 13-14
-	Discussion/perspektiviring 15-16
+	Reflection 15-16
 	Conclusion 17-17,5
 	Appendix 17,5-18
 	References 19-20
@@ -56,7 +56,6 @@ Introduction
 	HRI is the study of how humans and robots interact between each other, it has root in HCI(human computer interaction) where it have got some contributions from.
 	The definition of HITL is model that requires interaction from a human. HITL is close and referred to as interactive simulation, which is a simulation often physical
 	that includes a human operator in it.
-
 Literature
 	Papers and paper analysis
 Background
@@ -87,14 +86,28 @@ Background
 	Of new things to learn there is IoT, IoB, HRI and HITL, mainly IoT and HRI since they are ones of the main topics in this project. To help learn
 	these new topics, research need to be done with websites, papers and books. Papers will be focus on and the same case is for secondary topic HITL,
 	for IoB which is somewhat of a tertiary topic websites will be used for its research.
-
 Requirements
+	This section will mainly be occupied be 2 tables, 1 for functionel requiurements and 1 for non-functionel requirements, 
+	each table will have an ID for the requirement, an given name and a short description of the requirement, finally the requirement
+	will be rated by given a letter acording to the MoSCoW method, for the sake of prioritization in case of time limitation.
+
 	Table for funtionel and non-functionel with ID - Name - Description - MoSCoW
 Analysis
+	In this section the given data by SDU industry lab 4.0 for vizualization will be analysis, in that perspect it will be discuss which
+	kind of data was given and how it will affect the rest of the process, there will also be shone light of other relevant aspects of the data.
 Design
+	The design section will be about structuring the requirements and the decision made for the visualization of the data. Which will be influenced
+	by the people who gave it in the user evaluation, and what enviroment the data comes from while what situation the people need the visualization for.
 Implementation
+	Implementation is the section where the execution of the code of the visualization will be showcased, with all the consideration 
+	that was in the process of making it. All this with the usage of the chosen technology, that were pick out in the tool selection in the literature section above.
 Test
-Discussion/perspektiviring
+	The section of test will show the trials the interface have gone through to check the performance of the implementation of the visualization. 
+	2 kinds of tests will be used, usability test, where a user will try the interface, review it and give feedback and code-based test with 2 types 
+	unit-test with JUnit and acceptance test which is behavior driven.
+Reflection
+	Reflection section, here there will be reflected on what to do futher beyond if given more time and how the project progress went, like pros, cons,
+	what went well and what didn't go so good.
 Conclusion
 Appendix
 References
