@@ -71,7 +71,8 @@ Background
 	There was especially two works that stuck out of all of them, these were the paper "Connecting Human-Robot interaction and data visualization" 
 	and the book "Handbook of data visualization". These 2 helped a lot in the research apartment of this report/projects to get the right knowledge.
 	The book was a really good introduction to the main topic which is data visualization, with the basic, while the paper invovled HRI into the 
-	mixed, which was a good way to see and be shown an example and how the two topic could associate and work together (interdisciplinary) with each other.
+	mixed, which was a good way to see and be shown an example and how the two topic could associate and work together (interdisciplinary) with 
+	each other.
 	Further research influence can be find mainly under the litterature section where the paper review/paper analysis have its place and some more at 
 	the references section.
 
@@ -93,25 +94,96 @@ Requirements
 	each table will have an ID for the requirement, an given name and a short description of the requirement, finally the requirement
 	will be rated by given a letter acording to the MoSCoW method, for the sake of prioritization in case of time limitation.
 
+		-interview
+
 	Table for funtionel and non-functionel with ID - Name - Description - MoSCoW
 Analysis
 	In this section the given data by SDU industry lab 4.0 for vizualization will be analysis, in that perspect it will be discuss which
 	kind of data was given and how it will affect the rest of the process, there will also be shone light of other relevant aspects of the data.
+
+	The data is collected by a robot that have a camera of the XOVIS technology. The given data is given in 6 excel documents split into 3 groups, 
+	1 for meta-data, 1 for coordinates and 4 for the id's.
+	The meta-data describes information about the cameras used and with the id that connects to the other files.
+	The file for the coordinates contains the coordinates for the movements of the object in the zone that was tracked by the cameras
+	The id files have the data that the camera gathered in relation to the zones and lines 
+	(the zones and lines can be seen in the web interface for the camera)
+	The difference between the id files besides the actual data is the other information about/around the data, like in files 8bc there is:
+		8bc: 
+			Datatype: LINE
+			Element-id: 0
+			Resolution: 15 min 
+			Sensor-type: multi-sensor
+			Element-name: line1 (or line2)
+	All the id files will be called by their 3 first letter/numbers of the file name. 191 has the same information except for 2 places:
+		191:
+			Sensor-type: single-sensor
+			Element-name: boundary1(or boundary2)
+	The same 2 parameter are different in b65 as in 191:
+		b65: 
+			sensor-type: single-sensor
+			Element-name: to effi (or open to closed effi)
+	As it was for the 2 previous aformentioned, d20 has the exact same 2 parameters that are not the same as 8bc:
+		d20: 
+			sensor-type: single-sensor
+			Element-name: boundary3
+
+		-mads mail
+
 Design
 	The design section will be about structuring the requirements and the decision made for the visualization of the data. Which will be influenced
 	by the people who gave it in the user evaluation, and what enviroment the data comes from while what situation the people need the 
 	visualization for.
+
+	For how the dashboard will be design comes down to decisions of 3 aspects, these aspects are the result(feedback) of the user testing/evaluation,
+	how it can benefit the projects case(what are best for decision making, what is most practical), and what is posible in terms of technology, 
+	capabilities and scope.
+	It will now be discuss the technologies possibilities and furthermore what most benefits the projects practically speaking. So which kind of 
+	dashboard should be used and made? Plotly is a very versitile tool with many oppotunities for visualization like charts, diagram, figures, 
+	graph, maps and plots. Now plot, graph, diagram and chart could be confused and or culmited together, with their simularities and overlaping.
+	But after research and own interpurtation the 4 and 2 other, they are define thus:
+		Graph: presents relations and connections between data and used when data is complex in tables. Often associated with x and y axes. 
+		Diagram: can depicts sequences, and often used to distribution and a well known form of diagram is the histogram.
+		Plot: showing graphical techniques for data sets to find for example patterns.
+		Chart: Charts covers a wide variety e.g bar charts and pie charts.
+		Figures: Are illustrations that are shape like something object oriented.
+		Maps: An example is a heatmap, which represents data through colors, where each color counts for differents values. The data in talks 
+		could be spatel data or just geographical oriendted data.
+	Based on these these finds, graph probaly seem to be to right chose, with its x and y axes that the data have and the description 
+	"used when data is complex in tables", which is what the project try to solve, how to ease the complexity of the tables(which the data came in)
+	by visualization the data.
 Implementation
 	Implementation is the section where the execution of the code of the visualization will be showcased, with all the consideration 
 	that was in the process of making it. All this with the usage of the chosen technology, that were pick out in the tool selection 
 	in the literature section above.
+
+	Plotly dash is a framework for building data interfaces with low-code, created by the team behind plotly. Plotly is a free python library 
+	for interactive graphs. Both plotly and dashare open source. Python is a popular, dynamic and high-level programming languages. Plotly 
+	uses Pandas which are a data analysis tool that provides functionallity for plotting. Express is a module of plotly that allows creation 
+	of figures. All these have been inported to the python file "class", but also the technology/tool that was chosen/selected.
+
+	The interface have been structured in a typical way, that plotly app often do. Imports first(see imports above), then an initialisation of the ?
+	Then a layout section to all the html elemets, to design the interface and make all the other elements besides the actual visualization. 
+	The visualization happens in the callback section in a function with posible inputs and outputs where the data will be plotted like x and y
+	coordinates.
+	Lastly lines of code to run the interface.	
+	Commets throughout the code will be made for future readers of the code, for a better understanding and to easier read through it.
+
+		-update
 Test
 	The section of test will show the trials the interface have gone through to check the performance of the implementation of the visualization. 
 	2 kinds of tests will be used, usability test, where a user will try the interface, review it and give feedback and code-based test with 2 types 
-	unit-test with JUnit and acceptance test which is behavior driven.
+	unit-test with JUnit and acceptance test which is behavior driven. But most importantly is the third kind of testing, that are being used in
+	this project, it is user testing. User testing is where a user test the system/software which are being tested on, by performing actions to
+	see if all the functionallity is in order. After the user have performed the actions, the user review and give feedback to the developers,
+	so they then can improve their system/software.
 Reflection
 	Reflection section, here there will be reflected on what to do futher beyond if given more time and how the project progress went, like pros, 
 	cons, what went well and what didn't go so good.
+
+	Afther the estimated timeplan, was the student to do a user evaluation after 1.5 month, but was delayed and did the user evaluation after 2 month.
+	The reason for the delay was that the student spent a lot of time on the reserach for the paper review, to select the approach and especially the tool 
+	to use for the project, and also get the right amount of knowledge on the topics. After the user evaluation the student hyper focused on the bachelor
+	project to get caught up for the delay to get back on schedule. This early set back can be a reason for not fully finishing the project in time.
 Conclusion
 Appendix
 References

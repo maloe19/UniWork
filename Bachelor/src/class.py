@@ -1,0 +1,29 @@
+#https://plotly.com/python/getting-started/
+#https://dash.plotly.com/layout
+
+#from distutils.log import debug #kom auto
+import plotly.express as px
+from dash import Dash, html, Input, dcc
+import pandas as pd
+
+#app  = Dash(__name__)
+
+#app.layout = html.Div([
+    #htl elements
+#])
+
+#@app.callback(
+    #output and input
+#)
+
+#def display():
+    ##simplest form:
+    #fig = px.bar(x=["a","b","c"], y=[3, 2, 1])
+    #fig.show()
+    #return figure
+
+fig = px.bar(x=["a","b","c"], y=[3, 2, 1])
+fig.write_html('first_figure.html', auto_open=True)
+
+#if __name__ == '__main__':
+    #app.run_server(debug=True)
