@@ -58,7 +58,7 @@ Introduction
 	The definition of HITL is model that requires interaction from a human. HITL is close and referred to as interactive simulation, which is a 
 	simulation often physical that includes a human operator in it.
 Literature
-	Papers and paper analysis
+	See La
 Background
 	The student of this report that has a background in software engineering will use human-robot interaction (HRI), data visualization(dataVis) 
 	and internet of things(IoT) interdisciplinary to improve data visualization (interface) for human decision making with user centered 
@@ -93,21 +93,22 @@ Requirements
 	This section will mainly be occupied be 2 tables, 1 for functionel requiurements and 1 for non-functionel requirements, 
 	each table will have an ID for the requirement, an given name and a short description of the requirement, finally the requirement
 	will be rated by given a letter acording to the MoSCoW method, for the sake of prioritization in case of time limitation.
-
-		-interview
+	The requirements will be given directly or indirectly in a interview(the user evaluation) with the people responsable for the 
+	projects case origin. The directly given requirements is the ones the people specificly ask for, while the indirectly given
+	requirements is what the student have formed of requirements based on the conversation in the interview.
 
 	Table for funtionel and non-functionel with ID - Name - Description - MoSCoW
 Analysis
 	In this section the given data by SDU industry lab 4.0 for vizualization will be analysis, in that perspect it will be discuss which
 	kind of data was given and how it will affect the rest of the process, there will also be shone light of other relevant aspects of the data.
 
-	The data is collected by a robot that have a camera of the XOVIS technology. The given data is given in 6 excel documents split into 3 groups, 
+	The given data is given in 6 excel documents split into 3 groups, 
 	1 for meta-data, 1 for coordinates and 4 for the id's.
 	The meta-data describes information about the cameras used and with the id that connects to the other files.
 	The file for the coordinates contains the coordinates for the movements of the object in the zone that was tracked by the cameras
 	The id files have the data that the camera gathered in relation to the zones and lines 
 	(the zones and lines can be seen in the web interface for the camera)
-	The difference between the id files besides the actual data is the other information about/around the data, like in files 8bc there is:
+	Some difference between the id files lies in the information given, like in file 8bc there is:
 		8bc: 
 			Datatype: LINE
 			Element-id: 0
@@ -126,9 +127,13 @@ Analysis
 		d20: 
 			sensor-type: single-sensor
 			Element-name: boundary3
+	
+	The data is collected by the cameras of the XOVIS technology that sit on the ceiling, the cameras tracked human as entities. There was
+	4 cameras, therefore there was 4 id files, on for each camera. Got the data from Mads collected it and who was responsable for the 
+	software that stored the data.
 
-		-mads mail
-
+		the meta-data file and the coordinates file contains
+		the coordinates files will be visualize since it is in there the important data lies, the other are just for extra information
 Design
 	The design section will be about structuring the requirements and the decision made for the visualization of the data. Which will be influenced
 	by the people who gave it in the user evaluation, and what enviroment the data comes from while what situation the people need the 
@@ -163,12 +168,10 @@ Implementation
 
 	The interface have been structured in a typical way, that plotly app often do. Imports first(see imports above), then an initialisation of the ?
 	Then a layout section to all the html elemets, to design the interface and make all the other elements besides the actual visualization. 
-	The visualization happens in the callback section in a function with posible inputs and outputs where the data will be plotted like x and y
-	coordinates.
-	Lastly lines of code to run the interface.	
+	The section callback is for posible inputs and outputs.
+	The visualization happens in a function, where the data will be plotted like x and y coordinates.
+	Lastly lines of code to run the interface. Which opems a html webpage with the html and visualization made.	
 	Commets throughout the code will be made for future readers of the code, for a better understanding and to easier read through it.
-
-		-update
 Test
 	The section of test will show the trials the interface have gone through to check the performance of the implementation of the visualization. 
 	2 kinds of tests will be used, usability test, where a user will try the interface, review it and give feedback and code-based test with 2 types 
@@ -187,4 +190,4 @@ Reflection
 Conclusion
 Appendix
 References
-	Books and websites
+	Books and websites, also look at ref
