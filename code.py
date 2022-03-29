@@ -13,6 +13,17 @@ import pandas as pd
 
 #app.layout = html.Div([
     #htl elements
+        #dcc.Upload(
+        #id='upload-id',
+        #children=html.Div([
+            #'Upload file'
+        #]),
+        #style={
+
+        #},
+        ##Uploading multiple files is allowed
+        #multiple=True
+        #), 
 #])
 
 #@app.callback(
@@ -21,8 +32,8 @@ import pandas as pd
 
 #def display():
     ##simplest form:
-    #fig = px.bar(x=["a","b","c"], y=[3, 2, 1])
-    #fig.show()
+        #fig = px.bar(x=["a","b","c"], y=[3, 2, 1])
+        #fig.show()
     #return figure
 
 fig = px.bar(x=["a","b","c"], y=[3, 2, 1])

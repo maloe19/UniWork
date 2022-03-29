@@ -102,7 +102,7 @@ Analysis
 	In this section the given data by SDU industry lab 4.0 for vizualization will be analysis, in that perspect it will be discuss which
 	kind of data was given and how it will affect the rest of the process, there will also be shone light of other relevant aspects of the data.
 
-	The given data is given in 6 excel documents split into 3 groups, 
+	The given data is given in 6 excel documents as csv files split into 3 groups, 
 	1 for meta-data, 1 for coordinates and 4 for the id's.
 	The meta-data describes information about the cameras used and with the id that connects to the other files.
 	The file for the coordinates contains the coordinates for the movements of the object in the zone that was tracked by the cameras
@@ -132,8 +132,12 @@ Analysis
 	4 cameras, therefore there was 4 id files, on for each camera. Got the data from Mads collected it and who was responsable for the 
 	software that stored the data.
 
-		the meta-data file and the coordinates file contains
-		the coordinates files will be visualize since it is in there the important data lies, the other are just for extra information
+	The meta-data file contains 4 lines one for each camera, these lines consist of information about e.g status, sensor-info and time.
+	The coordinates file have 7 parameters and over 2000 entries of data. The 7 parameters are timestamp, id, name,
+	x, y, height, type, camera. This file is the one who will be visualize, because it is here interesting data are,
+	and it is also the most important data, the other files are just for some extra information.
+
+		mads nye mail
 Design
 	The design section will be about structuring the requirements and the decision made for the visualization of the data. Which will be influenced
 	by the people who gave it in the user evaluation, and what enviroment the data comes from while what situation the people need the 
