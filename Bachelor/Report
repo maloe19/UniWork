@@ -137,7 +137,11 @@ Analysis
 	x, y, height, type, camera. This file is the one who will be visualize, because it is here interesting data are,
 	and it is also the most important data, the other files are just for some extra information.
 
-		mads nye mail
+	The data was collected for the purpose of what Mahyar(the student counselor) is working on at SDU industry lab 4.0, which is 
+	working on some robot that can move around and have a sensor in front that can calculate distance. So maybe the data which
+	of human moving was a test to see if the camera was working as the should, the reason why this is discuss, is that if the
+	purpose is understanded, then how to design aka design decisions will be easier to make for the people working on 
+	the robot to take better decisions.
 Design
 	The design section will be about structuring the requirements and the decision made for the visualization of the data. Which will be influenced
 	by the people who gave it in the user evaluation, and what enviroment the data comes from while what situation the people need the 
@@ -160,6 +164,12 @@ Design
 	Based on these these finds, graph probaly seem to be to right chose, with its x and y axes that the data have and the description 
 	"used when data is complex in tables", which is what the project try to solve, how to ease the complexity of the tables(which the data came in)
 	by visualization the data.
+
+	Information access from the data giver Mads, reveal how much time it took to gather data, the tracked person coordinates took over a few days.
+	The data was gather not long before the project was set to begin. The line count data took well over some months, and there are gaps in the 
+	data time wise. This info about the tracked person coordinates helps take a desicion for the interface dashboard, which is since it is data
+	not taken constantly, that means the dashboard interface doesn't have to visualize automaticly as soon as the data i gathers, therefore
+	a way to upload the data is the way to go, also because tracked coordinates results in a lot of data, too much to manually type.
 Implementation
 	Implementation is the section where the execution of the code of the visualization will be showcased, with all the consideration 
 	that was in the process of making it. All this with the usage of the chosen technology, that were pick out in the tool selection 
@@ -170,12 +180,21 @@ Implementation
 	uses Pandas which are a data analysis tool that provides functionallity for plotting. Express is a module of plotly that allows creation 
 	of figures. All these have been inported to the python file "class", but also the technology/tool that was chosen/selected.
 
-	The interface have been structured in a typical way, that plotly app often do. Imports first(see imports above), then an initialisation of the ?
+	The interface have been structured in a typical way, that plotly app often do. Imports first(see imports above), then an initialisation 
+	of the app.
 	Then a layout section to all the html elemets, to design the interface and make all the other elements besides the actual visualization. 
 	The section callback is for posible inputs and outputs.
 	The visualization happens in a function, where the data will be plotted like x and y coordinates.
 	Lastly lines of code to run the interface. Which opems a html webpage with the html and visualization made.	
 	Commets throughout the code will be made for future readers of the code, for a better understanding and to easier read through it.
+
+	How to upload the file of data will be done by making a upload button in which the file can be selected from ones computer pathfinder,
+	then the app will read through the the file by using IO.
+	For the interactive and dynamic part, plotly dash always provide, that when hovered over the points or pillar etc. information are shown.
+	What the student will add to that is a sidebar with a toolmenu for action like zoom in and out and more.
+	To get the UCD aspect into the app, here the requirements from the interviews and the feedback from the user evaluation will preveal.
+	The student themself had some extra in mind, that is a dropdown menu, where different color could be chosen. Then the graph would change color 
+	corresponding to that color, this is to include and take into account color blind people.
 Test
 	The section of test will show the trials the interface have gone through to check the performance of the implementation of the visualization. 
 	2 kinds of tests will be used, usability test, where a user will try the interface, review it and give feedback and code-based test with 2 types 
@@ -191,6 +210,11 @@ Reflection
 	The reason for the delay was that the student spent a lot of time on the reserach for the paper review, to select the approach and especially the tool 
 	to use for the project, and also get the right amount of knowledge on the topics. After the user evaluation the student hyper focused on the bachelor
 	project to get caught up for the delay to get back on schedule. This early set back can be a reason for not fully finishing the project in time.
+
+	Throughout the project it became apparent that the student was very depending on other parties to for resources, this could be a factor for the 
+	delay, because depending on other can cause hindrance and wait. Learned after this experienced is that a less depended project would make the 
+	workflow of the project more smooth. The reason why the the project case is quite depended, is because of the bit rushed idea, since the time
+	of the project idea and thereby the contract was busy for both parts(student with exams and student counselor with preparation to next semester).
 Conclusion
 Appendix
 References
