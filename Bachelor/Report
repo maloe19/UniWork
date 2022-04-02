@@ -142,6 +142,13 @@ Analysis
 	of human moving was a test to see if the camera was working as the should, the reason why this is discuss, is that if the
 	purpose is understanded, then how to design aka design decisions will be easier to make for the people working on 
 	the robot to take better decisions.
+
+	A bit information and analysis on dashboards, normally a dashboard is one page, therefore it has to be designed well and 
+	be limited to only the most important things. Most often than not a dashboard have between 5 and 9 visualization on it.
+	The reason why dashboards normally are single screens is because then there is no space for too many visualization and 
+	no unnessesary things can come with, but only the aspects that need to be focused on. A good dashboard requires clear 
+	communication of information ("at a glance"), user friendly and interactive, these condition will allow users to quicklier
+	find patterns and trends in the data. The condition will also provide the user with the improvements of desicion making.
 Design
 	The design section will be about structuring the requirements and the decision made for the visualization of the data. Which will be influenced
 	by the people who gave it in the user evaluation, and what enviroment the data comes from while what situation the people need the 

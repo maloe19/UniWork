@@ -1,13 +1,13 @@
-import plotly.express as px
-from dash import Dash, html, Input, dcc, Output, State
+#import plotly.express as px
+from dash import Dash, html, Input, dcc, Output
 import pandas as pd
 import io
 import base64
-
-#fig = px.bar(x=["a","b","c"], y=[3, 2, 1])
-#fig.write_html('first_figure.html', auto_open=True)
+import plotly.graph_objs as go
 
 app  = Dash(__name__)
+
+#variabel: colors
 
 app.layout = html.Div([
     #drop-down med farver
@@ -19,13 +19,13 @@ app.layout = html.Div([
     ),
     html.Hr(),
     dcc.Upload(
-        id='input',
+        id='upload',
         children=html.Div([
             html.Button('Upload file')
         ]),
     ),
     html.Hr(),
-    html.Div(id='output'),
+    dcc.Graph(id='graphId')
 ])
 
 def parse(content, filename):
@@ -37,27 +37,29 @@ def parse(content, filename):
     except Exception as error:
         print(error)
         return html.Div(['Something went wrong'])
-    return html.Div([
-        html.H5(filename),
-        
-        dcc.Graph(
-            fina.to_dict('records'),
-            [{'name': i, 'id': i} for i in fina.columms]
-        )
-    ])
+    return fina
+
 
 @app.callback(
-    Output('output', 'children'),
-    Input('input', 'content'),
-    State('input', 'filename')
+    Output('graphId', 'figure'),
+    [
+        Input('upload', 'content'),
+        Input('upload', 'filename')
+    ]
 )
 
-def update(contentList, filenameList):
-    if contentList is not None:
-        children = [
-            parse(cL, fnL) for cL, fnL in zip(contentList, filenameList)
-        ]
-        return children
+def graphUpdate(content, filename):
+    fig = {
+        'layout': go.Layout(
+            #colors
+        )}
+    if content:
+        content = content[0]
+        filename = filename[0]
+        fina = parse(content, filename)
+        fina = fina.set_index(fina.columns[0])
+        fig['data'] = fina.iplot(asFigure=True, kind='scatter', mode='lines+makers', size=1)
+    return fig
 
 #def colorMethod(color):
     #viz = reference til px.bar i parse methode
