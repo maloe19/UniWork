@@ -1,9 +1,12 @@
 #import plotly.express as px
-from dash import Dash, html, Input, dcc, Output
+from dash import Dash, html, dcc, Input, Output
 import pandas as pd
 import io
 import base64
 import plotly.graph_objs as go
+
+#from dash.dependencies import Input, Output
+#import dash_core_components as dcc
 
 app  = Dash(__name__)
 
@@ -19,7 +22,7 @@ app.layout = html.Div([
     ),
     html.Hr(),
     dcc.Upload(
-        id='upload',
+        id='dataUpload',
         children=html.Div([
             html.Button('Upload file')
         ]),
@@ -28,37 +31,42 @@ app.layout = html.Div([
     dcc.Graph(id='graphId')
 ])
 
-def parse(content, filename):
-    string = content.split(',')
+def parse(contents, filename):
+    string = contents.split(',')
     dcode = base64.b64decode(string)
     try:
         if 'csv' in filename:
             fina = pd.read_csv(io.StringIO(dcode.decode('utf-8')))
-    except Exception as error:
-        print(error)
+        elif 'xls' in filename:
+            fina = pd.read_excel(io.BytesIO(dcode))
+        elif 'txt' or 'tsv' in filename:
+            fina = pd.read_csv(io.StringIO(dcode.decode('utf-8')), delimiter = r'\s+')
+    except Exception as e:
+        print(e)
         return html.Div(['Something went wrong'])
+        
     return fina
 
 
 @app.callback(
     Output('graphId', 'figure'),
     [
-        Input('upload', 'content'),
-        Input('upload', 'filename')
+        Input('dataUpload', 'contents'),
+        Input('dataUpload', 'filename')
     ]
 )
 
-def graphUpdate(content, filename):
+def graphUpdate(contents, filename):
     fig = {
         'layout': go.Layout(
             #colors
         )}
-    if content:
-        content = content[0]
+    if contents:
+        contents = contents[0]
         filename = filename[0]
-        fina = parse(content, filename)
+        fina = parse(contents, filename)
         fina = fina.set_index(fina.columns[0])
-        fig['data'] = fina.iplot(asFigure=True, kind='scatter', mode='lines+makers', size=1)
+        fig['data'] = fina.iplot(asFigure=True, kind='scatter', mode='lines+markers', size=1)
     return fig
 
 #def colorMethod(color):
@@ -66,4 +74,4 @@ def graphUpdate(content, filename):
      #og så brug markColor=color
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True) #host='0.0.0.0' og port=8000
