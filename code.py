@@ -18,17 +18,20 @@
 
 #app.layout = html.Div([
     #htl elements
-        #dcc.Upload(
-        #id='upload-id',
-        #children=html.Div([
-            #'Upload file'
-        #]),
         #style={
 
         #},
+
         ##Uploading multiple files is allowed
         #multiple=True
-        #), 
+
+        #drop-down med farver
+            #dcc.Dropdown(
+                #id="dropdown",
+                #options=['blue', 'red', 'yellow'],
+                #value='blue',
+                #flere properties
+            #),
 #])
 
 #@app.callback(
@@ -58,3 +61,8 @@
             #[{'name': i, 'id': i} for i in fina.columms]
         #)
         #])
+
+    #color metode, hænger sammen med dropdown med farver
+        #def colorMethod(color):
+            #viz = reference til px.bar i parse methode
+            #og så brug markColor=color
