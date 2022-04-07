@@ -18,13 +18,6 @@
 
 #app.layout = html.Div([
     #htl elements
-        #style={
-
-        #},
-
-        ##Uploading multiple files is allowed
-        #multiple=True
-
         #drop-down med farver
             #dcc.Dropdown(
                 #id="dropdown",
@@ -48,10 +41,6 @@
     #app.run_server(debug=True)
 
 #rester
-    #excel reading
-        #if 'xls' in filename:
-            #fina = pd.read_excel(io.BytesIO(dcode))
-
     #forsøg 1 på visualisering
             #return html.Div([
         #html.H5(filename),
