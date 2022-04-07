@@ -13,18 +13,15 @@
 #fig = px.bar(x=["a","b","c"], y=[3, 2, 1])
 #fig.write_html('first_figure.html', auto_open=True)
 #---------------------------------------------------
+#from dash.dependencies import Input, Output, State
+#import dash_core_components as dcc
+#import dash_html_components as html
+#import dash_table
 
 #app  = Dash(__name__)
 
 #app.layout = html.Div([
     #htl elements
-        #drop-down med farver
-            #dcc.Dropdown(
-                #id="dropdown",
-                #options=['blue', 'red', 'yellow'],
-                #value='blue',
-                #flere properties
-            #),
 #])
 
 #@app.callback(
@@ -44,14 +41,7 @@
     #forsøg 1 på visualisering
             #return html.Div([
         #html.H5(filename),
-        
-        #dcc.Graph(
-            #fina.to_dict('records'),
-            #[{'name': i, 'id': i} for i in fina.columms]
-        #)
-        #])
 
-    #color metode, hænger sammen med dropdown med farver
-        #def colorMethod(color):
-            #viz = reference til px.bar i parse methode
-            #og så brug markColor=color
+#HUSK
+#https://plotly.com/python/getting-started/
+#https://www.youtube.com/watch?v=6W4HpSI20NM
