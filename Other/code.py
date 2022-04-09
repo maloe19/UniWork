@@ -38,10 +38,14 @@
     #app.run_server(debug=True)
 
 #rester
-    #forsøg 1 på visualisering
-            #return html.Div([
-        #html.H5(filename),
+    #heatmap
+        #elif chosen_graph == 'imshow':
+            #fig2 = px.imshow(data, x=x_val, y=y_val)
+            #return dcc.Graph(figure=fig2)
+
+    
 
 #HUSK
-#https://plotly.com/python/getting-started/
-#https://www.youtube.com/watch?v=6W4HpSI20NM
+#https://plotly.com/python/getting-started/ -color
+#https://www.youtube.com/watch?v=6W4HpSI20NM -VIS
+#https://plotly.com/python/heatmaps/ -heatmap
