@@ -49,8 +49,7 @@ def parse(contents, filename, date):
         dcc.RadioItems(
             id="graph_choice",
             options=[{'label': 'bar-graph', 'value': 'bar'},
-                     {'label': 'heat-map', 'value': 'map'},
-                     {'label': 'scatter-plot', 'value': 'scatter'}],
+                     {'label': 'scatter-plot', 'value': 'scatter'}], #{'label': 'heat-map', 'value': 'map'},
                      value='bar'
         ),
         html.Hr(), 
@@ -96,25 +95,25 @@ def update(contentsList, filenameList, datesList):
 #output and input
 @app.callback(Output('output', 'children'),
             Input('make_graph', 'n_clicks'),
-            #State('graph_choice', 'value'),
+            State('graph_choice', 'value'),
             State('store_id', 'data'),
             State('x_axis', 'value'),
             State('y_axis', 'value'))
-def graph_maker(n, data , x_val, y_val): #chosen_graph
+def graph_maker(n, chosen_graph, data , x_val, y_val): #chosen_graph
     if n is None:
         return dash.no_update
-    else:
-        fig = px.bar(data, x=x_val, y=y_val)
-        return dcc.Graph(figure=fig)
-    #elif chosen_graph == 'bar'
+    #else:
         #fig = px.bar(data, x=x_val, y=y_val)
         #return dcc.Graph(figure=fig)
-    #elif chosen_graph == 'map'
+    elif chosen_graph == 'bar':
+        fig = px.bar(data, x=x_val, y=y_val)
+        return dcc.Graph(figure=fig)
+    #elif chosen_graph == 'map':
         #fig2 = px.map(data, x=x_val, y=y_val)
         #return dcc.Graph(figure=fig2)
-    #elif chosen_graph == 'scatter'
-        #fig3 = px.scatter(data, x=x_val, y=y_val)
-        #return dcc.Graph(figure=fig3)
+    elif chosen_graph == 'scatter':
+        fig3 = px.scatter(data, x=x_val, y=y_val)
+        return dcc.Graph(figure=fig3)
 
 #graph_color():
 
