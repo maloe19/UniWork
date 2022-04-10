@@ -8,6 +8,8 @@ import datetime
 
 app  = Dash(__name__, suppress_callback_exceptions=True) 
 
+#colors = px.colors.named_colorscales()
+
 #htl elements
 app.layout = html.Div([
     dcc.Upload(
@@ -30,6 +32,13 @@ def parse(contents, filename, date):
         if 'csv' in filename:
             #For uploading a CSV file
             df = pd.read_csv(io.StringIO(decoder.decode('utf-8')))
+        #excel reading
+        #elif 'xls' in filename:
+            #df = pd.read_excel(io.BytesIO(decoder))
+        #txt and tsv reading
+        #elif 'txt' or 'tsv' in filename:
+            #df = pd.read_csv(
+                #io.StringIO(decoder.decode('utf-8')))
     except Exception as error:
         print(error)
         return html.Div(['Something went wrong'])
@@ -47,6 +56,15 @@ def parse(contents, filename, date):
                      value='bar'
         ),
         html.Hr(), 
+        #drop-down with colors
+        #dcc.Dropdown(
+            #id="dropdown",
+            #options=['blue', 'red', 'Gold'],
+            #options=colors,
+            #value='blue',
+            #style={},
+        #),
+        #html.Hr(), 
 
         html.P("Pick x-axis"),
         dcc.Dropdown(id='x_axis', options=[{'label':x, 'value':x} for x in df.columns]),
@@ -78,24 +96,31 @@ def update(contentsList, filenameList, datesList):
         children = [parse(c, n, d) for c, n, d in zip(contentsList, filenameList, datesList)] 
         return children
 
+#output and input
 @app.callback(Output('output', 'children'),
             Input('make_graph', 'n_clicks'),
             State('graph_choice', 'value'),
             State('store_id', 'data'),
             State('x_axis', 'value'),
-            State('y_axis', 'value')) 
-def graph_maker(n, chosen_graph, data, x_val, y_val): 
+            State('y_axis', 'value')) #State("dropdown", "value"),
+def graph_maker(n, chosen_graph, data, x_val, y_val): #, color
     if n is None:
         return dash.no_update
+    #else:
+        #fig = px.bar(data, x=x_val, y=y_val)
+        #return dcc.Graph(figure=fig)
     elif chosen_graph == 'bar':
-        fig = px.bar(data, x=x_val, y=y_val) 
+        fig = px.bar(data, x=x_val, y=y_val) #, marker_color=color
         return dcc.Graph(figure=fig)
     elif chosen_graph == 'map':
         fig2 = px.density_heatmap(data, x=x_val, y=y_val, marginal_x="histogram", marginal_y="histogram", text_auto=True)
         return dcc.Graph(figure=fig2)
-    elif chosen_graph == 'scatter': 
-        fig3 = px.scatter(data, x=x_val, y=y_val) 
+    elif chosen_graph == 'scatter': #and color == 'red'
+        fig3 = px.scatter(data, x=x_val, y=y_val) #, color="size" #, color="colors", color_continuous_scale=color
         return dcc.Graph(figure=fig3)
+    #elif color == 'red':
+        #fig4 = px.scatter(data, x=x_val, y=y_val) 
+        #return dcc.Graph(figure=fig4)
 
 if __name__ == '__main__':
-    app.run_server(debug=True) 
+    app.run_server(debug=True) #host='0.0.0.0' og port=8000
