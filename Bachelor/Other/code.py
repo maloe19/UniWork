@@ -49,3 +49,4 @@
 #https://plotly.com/python/getting-started/ -color
 #https://www.youtube.com/watch?v=6W4HpSI20NM -VIS
 #https://plotly.com/python/heatmaps/ -heatmap
+#https://plotly.com/python/discrete-color/ -color2

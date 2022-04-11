@@ -183,7 +183,7 @@ Implementation
 	in the literature section above.
 
 	Plotly dash is a framework for building data interfaces with low-code, created by the team behind plotly. Plotly is a free python library 
-	for interactive graphs. Both plotly and dashare open source. Python is a popular, dynamic and high-level programming languages. Plotly 
+	for interactive graphs. Both plotly and dash are open source. Python is a popular, dynamic and high-level programming languages. Plotly 
 	uses Pandas which are a data analysis tool that provides functionallity for plotting. Express is a module of plotly that allows creation 
 	of figures. All these have been inported to the python file "class", but also the technology/tool that was chosen/selected.
 
@@ -198,10 +198,18 @@ Implementation
 	How to upload the file of data will be done by making a upload button in which the file can be selected from ones computer pathfinder,
 	then the app will read through the the file by using IO.
 	For the interactive and dynamic part, plotly dash always provide, that when hovered over the points or pillar etc. information are shown.
+
+	---
 	What the student will add to that is a sidebar with a toolmenu for action like zoom in and out and more.
 	To get the UCD aspect into the app, here the requirements from the interviews and the feedback from the user evaluation will preveal.
 	The student themself had some extra in mind, that is a dropdown menu, where different color could be chosen. Then the graph would change color 
 	corresponding to that color, this is to include and take into account color blind people.
+
+	-checklist of different vis
+		-scatter
+		-bar
+		-heatmep with text and histograms ofr x and y axis
+	-table
 Test
 	The section of test will show the trials the interface have gone through to check the performance of the implementation of the visualization. 
 	2 kinds of tests will be used, usability test, where a user will try the interface, review it and give feedback and code-based test with 2 types 

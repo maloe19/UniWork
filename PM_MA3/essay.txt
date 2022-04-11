@@ -1,33 +1,34 @@
-Deadline:Friday, April 22nd, 2022 at 12:00
-
-Frontpage:
-    Title of assignment
-    By
-        Name & sdu-mail
-        Group meber and their sdu-mail
+Jaguar project
+    By Martin Løvborg, maloe19@student.sdu.dk
+    Group member:Yonus & Mustafa
     Mandatory assignment 3
     Course: SE6-POM
     Term: Spring 2022
-    Handed in: today
-    sdu-logo
+    Handed in: Friday, April 22nd, 2022 at 12:00
+    SDU-logo
     The Maersk Mc-Kinney Moeller Institute
     University of Southern Denmark
-Generel outline/section structure:
-    Position statement
-        -Introduction plus one to two paragraphs
-        -In  the  position  statement  you  should  clearly  state  your  overallevaluation of the case.
-    Evaluation Criteria
-        -1--4 Evaluation criteria one line each plus supporting text for arguments
-        -The evaluation criteria you base the overall evaluation on. The evaluation criteria are 
-        the criteria you use to evaluate the case on. An example could be”The organizational 
-        advantages and disadvantages of the project management”.  Thereshould typical be 
-        a small number of evaluation criteria (1–4)
-    Proof of the evaluation
-        -App.\ two paragraphs per criteria
-        -The proof of the evaluation discuss each of the evaluationcriteria’s advantages and disadvantages, 
-        i.e. if you have three evaluation criteria you shoulddiscuss the advantages 
-        and disadvantages for each of them supported by evidence fromthe case
-    Qualofications
-        -Max half a page
-        -Other important factors that are not part of the evaluation criteria buthave an important impact 
-        on the evaluation.
+
+Position statement
+    -lidt kort og hurtigg info om firmart
+    -jaguar project:
+        team merge conflicts
+        alphatech, software trouble but hardware not
+        too focus on data, tools and process instead of the task/project itself
+Evaluation Criteria
+    1: 
+    2:
+    3:
+    evaluate the case 
+Proof of the evaluation
+    1: 
+        a: advantages 
+        b: disadvantages
+    2:
+        a: advantages 
+        b: disadvantages
+    3:
+        a: advantages 
+        b: disadvantages
+Qualofications
+    Other important factors

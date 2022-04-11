@@ -4,48 +4,49 @@ import pandas as pd
 import io
 import base64
 import dash
-import datetime
-
-app  = Dash(__name__, suppress_callback_exceptions=True) 
+#import datetime
 
 #colors = px.colors.named_colorscales()
+stylesheet = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+
+app  = Dash(__name__, suppress_callback_exceptions=True, external_stylesheets=stylesheet) 
 
 #htl elements
 app.layout = html.Div([
     dcc.Upload(
         id='data_upload',
-        children=html.Div([html.Button('Upload file')]),
-        style={},
+        children=html.Div([html.Button('Upload file'), 'or Drag and Drop']), 
+        style={'textAlign': 'center'},
         #Uploading multiple files is allowed
         multiple=True
     ),
     html.Hr(), #a horizontal line
     html.Div(id='output'),
+    html.Hr(),
     html.Div(id='output_table'),
 ])
 
-def parse(contents, filename, date):
+def parse(contents, filename): #, date
     type, string_content = contents.split(',')
 
     decoder = base64.b64decode(string_content)
     try:
+        #For uploading a CSV file
         if 'csv' in filename:
-            #For uploading a CSV file
             df = pd.read_csv(io.StringIO(decoder.decode('utf-8')))
         #excel reading
-        #elif 'xls' in filename:
-            #df = pd.read_excel(io.BytesIO(decoder))
+        elif 'xls' in filename:
+            df = pd.read_excel(io.BytesIO(decoder))
         #txt and tsv reading
-        #elif 'txt' or 'tsv' in filename:
-            #df = pd.read_csv(
-                #io.StringIO(decoder.decode('utf-8')))
+        elif 'txt' or 'tsv' in filename:
+            df = pd.read_csv(io.StringIO(decoder.decode('utf-8')))
     except Exception as error:
         print(error)
         return html.Div(['Something went wrong'])
 
     return html.Div([
         html.H1(filename),
-        html.H2(datetime.datetime.fromtimestamp(date)),
+        #html.H2(datetime.datetime.fromtimestamp(date)),
 
         html.P("Select graph"),
         dcc.RadioItems(
@@ -53,7 +54,7 @@ def parse(contents, filename, date):
             options=[{'label': 'bar-graph', 'value': 'bar'},
                      {'label': 'heat-map', 'value': 'map'},
                      {'label': 'scatter-plot', 'value': 'scatter'}], 
-                     value='bar'
+            value='bar'
         ),
         html.Hr(), 
         #drop-down with colors
@@ -76,24 +77,23 @@ def parse(contents, filename, date):
         dash_table.DataTable(
             data=df.to_dict('records'),
             columns=[{'name': i, 'id': i} for i in df.columns],
-            page_size=15
+            page_size=10
         ),
         dcc.Store(id='store_id', data=df.to_dict('records')),
-        html.Hr(),
+        #html.Hr(),
 
         #Debugging the display of the content
-        html.Div('ContentRaw'),
-        html.Pre(contents[0:200] + '...', style={})
+        #html.Div('ContentRaw'),
+        #html.Pre(contents[0:200] + '...', style={})
     ])
 
 #output and input
 @app.callback(Output('output_table', 'children'),
                 Input('data_upload', 'contents'),
-                State('data_upload', 'filename'),
-                State('data_upload', 'last_modified'))
-def update(contentsList, filenameList, datesList):  
+                State('data_upload', 'filename')) #State('data_upload', 'last_modified')
+def update(contentsList, filenameList):#, datesList
     if contentsList is not None:
-        children = [parse(c, n, d) for c, n, d in zip(contentsList, filenameList, datesList)] 
+        children = [parse(c, n) for c, n in zip(contentsList, filenameList)]#, datesList + d
         return children
 
 #output and input
