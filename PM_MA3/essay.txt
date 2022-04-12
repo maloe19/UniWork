@@ -10,15 +10,22 @@ Jaguar project
     University of Southern Denmark
 
 Position statement
-    -lidt kort og hurtigg info om firmart
-    -jaguar project:
-        team merge conflicts
-        alphatech, software trouble but hardware not
-        too focus on data, tools and process instead of the task/project itself
+    Terydyne is a corporation that supplies tools for semiconductor testing, 
+    it is the worlds biggest of that kind the more than 6000 workers internatioelly
+    with 1.8 bil in sales as of 2004 and is 45 year old (began in 1960, to 2005).
+
+    The jaguar project set out to make a completely new system platform for testing
+    the new product(semiconductors), therefore it is one of the most crucial project 
+    in the companies history. Other than that it is a sort of culmination of the
+    company try to get a more efficient product development process. A good portion 
+    of the project went well, like the hardware, but some didn't like the software part.
+    This also count for the management practices for development process improvement, 
+    such as tools to track the progress of the team and up-front planning. Other
+    challenges the project went through was team merge conflicts and deal with customer.
 Evaluation Criteria
-    1: 
-    2:
-    3:
+    1: Scope - task
+    2: Schedule - time
+    3: Resources - money
     evaluate the case 
 Proof of the evaluation
     1: 
@@ -32,3 +39,4 @@ Proof of the evaluation
         b: disadvantages
 Qualofications
     Other important factors
+        communication?

@@ -98,6 +98,10 @@ Requirements
 	requirements is what the student have formed of requirements based on the conversation in the interview.
 
 	Table for funtionel and non-functionel with ID - Name - Description - MoSCoW
+	F01 - visualization - visualize the data - M
+
+	F: showcase of data(table), choice of graph(checklist), choice of axes(dropdown)
+	NF: ?
 Analysis
 	In this section the given data by SDU industry lab 4.0 for vizualization will be analysis, in that perspect it will be discuss which
 	kind of data was given and how it will affect the rest of the process, there will also be shone light of other relevant aspects of the data.
@@ -177,6 +181,14 @@ Design
 	data time wise. This info about the tracked person coordinates helps take a desicion for the interface dashboard, which is since it is data
 	not taken constantly, that means the dashboard interface doesn't have to visualize automaticly as soon as the data i gathers, therefore
 	a way to upload the data is the way to go, also because tracked coordinates results in a lot of data, too much to manually type.
+
+	se onenote
+		why table
+		why these 3 graph options?
+		why pop up html divs
+		style sheet
+		heatmap - histograms
+		why dropdown and checklist, and why not reverse?
 Implementation
 	Implementation is the section where the execution of the code of the visualization will be showcased, with all the consideration 
 	that was in the process of making it. All this with the usage of the chosen technology, that were pick out in the tool selection 
@@ -197,19 +209,25 @@ Implementation
 
 	How to upload the file of data will be done by making a upload button in which the file can be selected from ones computer pathfinder,
 	then the app will read through the the file by using IO.
-	For the interactive and dynamic part, plotly dash always provide, that when hovered over the points or pillar etc. information are shown.
-
-	---
-	What the student will add to that is a sidebar with a toolmenu for action like zoom in and out and more.
+	For the interactive and dynamic part, plotly dash always provide, that when hovered over the points or pillar etc. information are shown. 
+	It also provides a sidebar with a toolmenu for action like zoom in and out and more. 
 	To get the UCD aspect into the app, here the requirements from the interviews and the feedback from the user evaluation will preveal.
-	The student themself had some extra in mind, that is a dropdown menu, where different color could be chosen. Then the graph would change color 
-	corresponding to that color, this is to include and take into account color blind people.
 
-	-checklist of different vis
-		-scatter
-		-bar
-		-heatmep with text and histograms ofr x and y axis
-	-table
+	When the file of the data is uploaded a table with the data will appear with the choice of making the a graph, where there are 3 
+	parameters to adjust, the x and y axis and which kind of graph. The different kinds of graph are a bar plot, heatmap and a scatter plot.
+	For the x and y axis, they have been made as a dropdown where the 7 parameters from the data can be choosen between them. For the graph
+	choice, it has been implemented as a checklist with radio items. The whole dashboard have been styled by using a stylesheet.
+
+	In terms of the code, the stylesheet got imported by a variable. Then the layout part contains the upload component and the 2 html divs 
+	the consist of the visualization itself and the table plus the choices to create the graph. After that a parse method to read the data 
+	file with a return statement that includes the table plus the choices to create the graph. Thereafter 2 sets of callback with 
+	corresponding method, the first is for the table and the corresponding method is called update and the second is for the graph with 
+	the "graph_maker" method. The update method calls the parse method and the graph_maker method uses if-statements based on which type
+	of graph was choosen in the checklist.
+
+	For some extra, the upload component also allows drag and drop. It has also been implemented so more than 1 file can be uploaded.
+	The parse method also have the ability to read excel, txt and tsv files, so not only csv files. To read the files in the parse 
+	method a try-except have been utilized. The heatmap also got some more than the 2 others with histograms for the axes.
 Test
 	The section of test will show the trials the interface have gone through to check the performance of the implementation of the visualization. 
 	2 kinds of tests will be used, usability test, where a user will try the interface, review it and give feedback and code-based test with 2 types 

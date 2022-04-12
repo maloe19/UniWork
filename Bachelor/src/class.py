@@ -29,8 +29,8 @@ def parse(contents, filename):
 
     decoder = base64.b64decode(string_content)
     try:
+        #For uploading a CSV file
         if 'csv' in filename:
-            #For uploading a CSV file
             df = pd.read_csv(io.StringIO(decoder.decode('utf-8')))
         #excel reading
         elif 'xls' in filename:

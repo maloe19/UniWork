@@ -57,7 +57,7 @@ def parse(contents, filename): #, date
             value='bar'
         ),
         html.Hr(), 
-        #drop-down with colors
+        #drop-down with colors                   #måske lave dropdown options som checklist ovenover!!!
         #dcc.Dropdown(
             #id="dropdown",
             #options=['blue', 'red', 'Gold'],
