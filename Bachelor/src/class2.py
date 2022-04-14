@@ -57,12 +57,16 @@ def parse(contents, filename): #, date
             value='bar'
         ),
         html.Hr(), 
+
         #drop-down with colors                   #måske lave dropdown options som checklist ovenover!!!
         #dcc.Dropdown(
-            #id="dropdown",
+            #id="color_choice",
             #options=['blue', 'red', 'Gold'],
             #options=colors,
-            #value='blue',
+            #options=[{'label': 'gold', 'value': 'Gold'},
+                     #{'label': 'turquoise', 'value': 'MediumTurquoise'},
+                     #{'label': 'green', 'value': 'LightGreen'}], 
+            #value='Gold',
             #style={},
         #),
         #html.Hr(), 
@@ -102,14 +106,14 @@ def update(contentsList, filenameList):#, datesList
             State('graph_choice', 'value'),
             State('store_id', 'data'),
             State('x_axis', 'value'),
-            State('y_axis', 'value')) #State("dropdown", "value"),
+            State('y_axis', 'value')) #State('color_choice', 'value'),
 def graph_maker(n, chosen_graph, data, x_val, y_val): #, color
     if n is None:
         return dash.no_update
     #else:
         #fig = px.bar(data, x=x_val, y=y_val)
         #return dcc.Graph(figure=fig)
-    elif chosen_graph == 'bar':
+    elif chosen_graph == 'bar': #and color == 'Gold' or 'MediumTurquoise' or "LightGreen"
         fig = px.bar(data, x=x_val, y=y_val) #, marker_color=color
         return dcc.Graph(figure=fig)
     elif chosen_graph == 'map':

@@ -24,19 +24,34 @@ Position statement
     challenges the project went through was team merge conflicts and deal with customer.
 Evaluation Criteria
     1: Scope - task
+        The first criteria for the evaluation of the jaguar project will be named scope
+        and focused on how the team did in their task amount in the time that they had.
     2: Schedule - time
-    3: Resources - money
+        The second criteria is schehule, which is time, so if the process took longer
+        or shorter than deadline, and compared to the estimation of the team and company.
+    3: Resources - money/cost
+        Resources is the third criteria and is about how well the money was spent i.e.
+        amount of team member, skill level and could some unnessesary things be spared.
     evaluate the case 
 Proof of the evaluation
     1: 
-        a: advantages 
-        b: disadvantages
+        a: An advantages of scope is that it shows how big the project is, and therefore
+        estimation on time and cost can be made. 
+        b: A disadvantages of scope is that it can change from task to task, based on
+        the goal or development.
     2:
-        a: advantages 
-        b: disadvantages
+        a: Advantages in time is that it can help with planning, and thereby allocate
+        time to other projects too.
+        b: Disadvantages with schehuling ia that it is always estimation, because no one
+        can predict the future, and often a project is behind rather than ahead because 
+        of that.
     3:
-        a: advantages 
-        b: disadvantages
+        a: An advantages with this criteria is that resources and cost can overlap easily
+        and is 2/3 of the scope triangle, it is also always important to keep track of these 
+        parameters, because a company need to earn money to survive, and with these profit
+        can be discovered more easily.
+        b: Resources disadvantages is that it is hard to decide and choose what is the right
+        thing to use it on, more skills in the team, an extra team member etc.
 Qualofications
     Other important factors
         communication?

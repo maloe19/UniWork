@@ -101,7 +101,14 @@ Requirements
 	F01 - visualization - visualize the data - M
 
 	F: showcase of data(table), choice of graph(checklist), choice of axes(dropdown)
-	NF: ?
+		F02 - table - showcase of data - W
+		F03 - checklist - choice of graph - S
+		F04 - dropdown - chouce of axes - C
+	NF: ? - https://en.wikipedia.org/wiki/Non-functional_requirement , QA
+			(usability, performance/repsone time, dockerfile til download af dash og panda til setup?)
+		capasity
+		no login?
+		user friendly, not much text?
 Analysis
 	In this section the given data by SDU industry lab 4.0 for vizualization will be analysis, in that perspect it will be discuss which
 	kind of data was given and how it will affect the rest of the process, there will also be shone light of other relevant aspects of the data.
@@ -182,13 +189,29 @@ Design
 	not taken constantly, that means the dashboard interface doesn't have to visualize automaticly as soon as the data i gathers, therefore
 	a way to upload the data is the way to go, also because tracked coordinates results in a lot of data, too much to manually type.
 
-	se onenote
-		why table
-		why these 3 graph options?
-		why pop up html divs
-		style sheet
-		heatmap - histograms
-		why dropdown and checklist, and why not reverse?
+	It have been decided to show the data in a table on the dashboard, so the user have an easier time getting access tot he data instead of switches
+	to the file itself.
+	As of now 3 different options of graph can be choosen in the dashboard, bar graph, heatmap and scatter plot. The reason for these exact 3, is 
+	because bar graph was the first to be made, since it was the easiest way to visualize the data at the start, and then it have just stayed, for
+	more variety. Heatmap and scatter plot was choosen for the reason that is fitting more with the kind of data that is in work here, which is 
+	coordinates and with the heatmap and scatter plot it resembles somewhat of a grid and shows where the most activity have been, especially the
+	heatmap. The heatmap have also got histograms attached to it for each axes choosen, for getting a better understanding and because plotly dash
+	allows it quite easily.
+
+	It have been choosen that choice of graph would be a checklist and axes choice would be a dropdown, since it was more suitable with graph choice
+	only being 3, so displaying it wont take that much space and for the opposite reason for the axes and dropdown, with that is means 7 choices for
+	axes to much much too display so hiding it in a dropdown would be appropriate and the axes is based on the 7 parameter of the  data which is shown
+	in the table under the dropdown, so the options is also shown there.
+	Since the student was behind schedule early in the projects process, some time have been spared by using a style sheet to style the interface 
+	instead of manually stylize it.
+	The way the choices to make a graph and the visualization itself pops up in html div, have been done for less posible confusing and as simple as 
+	posible. In the start the a file has to be upload so the data can be access for the visualization, so that is the only options to start with. 
+	After the file have been upload succesfully, the data is shown in a table and the choices comes up that is fairly straight forward. When the
+	choices have been made and the button for creating the graph is push/clicked, the visualization pop out in the middle, this is an relatively 
+	easy to follow process.
+
+		Til det sidste afsnit(pop up afsnittet) måske lave mobil diagram hvor man viser måde vejen.
+		Husk diagrammer til dette afsnit (DESIGN afsnittet)
 Implementation
 	Implementation is the section where the execution of the code of the visualization will be showcased, with all the consideration 
 	that was in the process of making it. All this with the usage of the chosen technology, that were pick out in the tool selection 
