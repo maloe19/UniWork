@@ -210,8 +210,17 @@ Design
 	choices have been made and the button for creating the graph is push/clicked, the visualization pop out in the middle, this is an relatively 
 	easy to follow process.
 
-		Til det sidste afsnit(pop up afsnittet) måske lave mobil diagram hvor man viser måde vejen.
-		Husk diagrammer til dette afsnit (DESIGN afsnittet)
+	The upcoming figure of the navigation model is a bit different from the traditional normal navigation models in that there are no mutiple pages, 
+	but the model just shows the progress of the dashboard/interface.
+	-Picture of navigation model
+		Figure 1: A model on how to navigate through the dashboard/interface
+	-Upload: A file of data can either be uploaded via the pathfinder or drag and drop into a box
+	-Choices: Choices for the graph can be made here, there are the axes and which type of graph that is wanted to be shown.
+	-Graph: After the choices have been made and the "make graph" button have been press, the graph will appear. If any changes are wished, the 
+	choices can be edited, but a necessity is that the button have to be pressed again(that is why choices and graph is in a loop). 
+	The surface of the dashboard color is just the standard white background, since it is the protocol norm of dashboards. The graphs color is 
+	also the stanard blue for plotly dash, that only counts for the bar graph and scatter plot. For the heatmap plotly dashs standard color 
+	scale is in use. Color changing of the graph has been considered, but have not got it to work yet.
 Implementation
 	Implementation is the section where the execution of the code of the visualization will be showcased, with all the consideration 
 	that was in the process of making it. All this with the usage of the chosen technology, that were pick out in the tool selection 

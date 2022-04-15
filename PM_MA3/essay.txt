@@ -53,5 +53,9 @@ Proof of the evaluation
         b: Resources disadvantages is that it is hard to decide and choose what is the right
         thing to use it on, more skills in the team, an extra team member etc.
 Qualofications
-    Other important factors
-        communication?
+    A important factor that dont get covered by the criteria is communication, well it can be 
+    argued that schehule covers it a bit, but not surfficiently enough. Communication include
+    meetings and team spirit, communication can be good so everyone is on the same page and 
+    know what to do, but on the other hand misunderstandings can happen/accur.
+    Other minor factors are stratety and structure, performance and culture, and for this
+    project particually tools and process play somewhat of a vast role.
