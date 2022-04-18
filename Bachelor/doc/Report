@@ -100,15 +100,14 @@ Requirements
 	Table for funtionel and non-functionel with ID - Name - Description - MoSCoW
 	F01 - visualization - visualize the data - M
 
-	F: showcase of data(table), choice of graph(checklist), choice of axes(dropdown)
+	F: 
 		F02 - table - showcase of data - W
 		F03 - checklist - choice of graph - S
 		F04 - dropdown - chouce of axes - C
-	NF: ? - https://en.wikipedia.org/wiki/Non-functional_requirement , QA
-			(usability, performance/repsone time, dockerfile til download af dash og panda til setup?)
-		capasity
-		no login?
-		user friendly, not much text?
+	NF: 
+		NF01 - capasity - at least 1 file must be able to be uploaded
+		NF02 - response time - the dashboard/interface has to response to a user action in 0.3 seconds at minimum
+		NF03 - usability - the dashboard/interface has to be user friendly, and for this project it will be defined as the bare minimal text
 Analysis
 	In this section the given data by SDU industry lab 4.0 for vizualization will be analysis, in that perspect it will be discuss which
 	kind of data was given and how it will affect the rest of the process, there will also be shone light of other relevant aspects of the data.
@@ -160,6 +159,38 @@ Analysis
 	no unnessesary things can come with, but only the aspects that need to be focused on. A good dashboard requires clear 
 	communication of information ("at a glance"), user friendly and interactive, these condition will allow users to quicklier
 	find patterns and trends in the data. The condition will also provide the user with the improvements of desicion making.
+
+	For the first question, just a visualization will help for better decision making since a illustration is more comprehensible 
+	than a data sheet, there also are the existence of the saying "a picture is worth a thousand words". For this specific case
+	a heatmap is the way way tp help operators make better decision, because it maps the data, which is coordinates based,  
+	pretty accurately and precise. (INSERT: what are the deciding? and the rest of the report highlights this)
+	While it have been mentioned before, to answer the second question shortly, since more detailed on the subject is to find 
+	elsewhere in the report. UCD is incoorporated in this project through the user evaluation which is mostly a part of the 
+	testing as an usability test.
+	The third question already have largely and primarily been answered in the literature review with all the research. Other
+	examples that highlight and answer the question is all around the report, so for a quick walk through:
+	Advantages(pros):
+		-Quicker understanding
+		-Better recognition
+		-Faster insights
+	Disadvantages(cons):
+		-Can be misleading
+		-Estimation
+		-One angled
+	While all the knowledge research on the subjects (IoT, IoB, HRI and HITL) have been done for the most part in the literature
+	section, well everything outside IoB. It will now be analyzed how this subjects come to florition in the project.
+	IoT and HRI is covered by here the data is from, which was SDU industry lab 4.0. With it being an IoT enviroment and there
+	being operators that work with robots, some of which collected the data that are currently being worked on.
+	HITL come in with the operators making decisions first of all, in the loop there are also data collecting which Mads stood
+	for and for the dashboard itself a human has to manually upload the data file and select the choices of ones liking. All 
+	these are where human operators is required to be in the loop of making the data visualization and in the end making a
+	decision based on that visualization.
+	The IoB aspect will be unlocked through the user evaluation when users react to the dashboard(the technology that are being
+	developed in this project) and when maybe(if the dashboard is used) the operators take a decision out of the context they
+	get out of it. Also when designing the dashboard based on the analysis of the user data from the user evaluation, this is 
+	a part of the process of IoB too.
+	HCI althrough a minor topic of the project, gets covered by when someone interact with a computer, could be the likes Of
+	the operators or the users in the user evaluation.
 Design
 	The design section will be about structuring the requirements and the decision made for the visualization of the data. Which will be influenced
 	by the people who gave it in the user evaluation, and what enviroment the data comes from while what situation the people need the 

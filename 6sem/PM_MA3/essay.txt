@@ -32,7 +32,22 @@ Evaluation Criteria
     3: Resources - money/cost
         Resources is the third criteria and is about how well the money was spent i.e.
         amount of team member, skill level and could some unnessesary things be spared.
-    evaluate the case 
+    
+    For scope the hardware part had all the requirements, however the software bit
+    didn't, was somewhat working but with a lot of bugs.
+        reason for this situation and what could they have done?
+    The schedule is in the same situation as scope the hardware was on time, 
+    actually early and software was late with around a year due to delays of
+    bug fixing and for finished development, since they delivered like a prototype
+    to the deadline.
+        reason for this situation and what could they have done?
+            testing
+    Resources is not stated what the team got only a table of income, but it is believed
+    that hardware spent the right amount or less and software definately used more budget,
+    because the after work (afther the deadline) the department hired 50 people 
+    additionately.(Again this is not stated directly)
+        reason for this situation and what could they have done?
+            affected by the other parameters/criteria
 Proof of the evaluation
     1: 
         a: An advantages of scope is that it shows how big the project is, and therefore
@@ -59,3 +74,10 @@ Qualofications
     know what to do, but on the other hand misunderstandings can happen/accur.
     Other minor factors are stratety and structure, performance and culture, and for this
     project particually tools and process play somewhat of a vast role.
+
+        Der kan nævnes alt det ekstra som er i bunden af casen
+
+        Noter:
+        -bunden af side 9: prototype som hjælp af alphatech udvægelse
+        -tredje sidste afsnit på side 10: stres
+        -lav overordnet afsnit af mening: når læst føles som om projekt ikke gik så godt og meget kaotisk(men husk på er uafaren)
