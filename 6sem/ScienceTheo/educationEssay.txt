@@ -1,5 +1,9 @@
 Forside
-
+    Af Martin Løvborg, maloe19@student.sdu.dk
+    Obligatorisk opgave: opgave 3
+    Kursus: Ingeniørfagets videnskabsteori
+    Semester: foråret 2022
+    Dato: 1- juni 2020
 Side 1: 
     Ideen om universitetet (eller bare vidregående uddannelser) startede i middelalderen omkring årtiet 1200, 
     her i denne tid dominerede kirken.Det er derfor de etablerede de første universiteter, også fra før 
@@ -64,6 +68,6 @@ Side 2-3
     nuværende problemer.
 
 Referencer:
-    reformkommision link
-    "ideer om uni" kapitlet
-    "akademisk chokkur" artiklen
+    Reformkommisionens link: https://reformkommissionen.dk/ 
+    "Ideer om universitetet" kapitlet
+    "Akademisk chokkur" artiklen

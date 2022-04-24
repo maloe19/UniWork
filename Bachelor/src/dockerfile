@@ -1,5 +1,5 @@
 FROM python:3
-#RUN pip install python3 #at least puthon 3.10
+#RUN pip install python3 #at least python 3.10
 RUN pip install dash
 RUN pip install pandas
 
