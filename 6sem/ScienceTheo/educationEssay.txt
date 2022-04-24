@@ -1,6 +1,6 @@
 Forside
 
-Side 1: referer til indstilliger jeg finder mest relevant
+Side 1: 
     Ideen om universitetet (eller bare vidregående uddannelser) startede i middelalderen omkring årtiet 1200, 
     her i denne tid dominerede kirken.Det er derfor de etablerede de første universiteter, også fra før 
     den tid blev munkene set som de skriftkloge, siden de kunne læse og skrive (det var et krav), og dermed
@@ -38,21 +38,32 @@ Side 1: referer til indstilliger jeg finder mest relevant
     over 9.
 
 Side 2-3
-    hovedsagligt meninger om "akademisk chokkur" artiklen
-        politikere skal altid sætte præg
-            arbejdgivere bachelor vs kand (mindre uddannelse), kval ikke mål for længde men indhold
-            til su afsnit: præget af valget
-    pro of con for reformkommisionen
-        ud fra de 3 temaer de 2 år kan man se forandring: 
-            i 2020 fokus på job, 
-            mens 2022 er høj velstand og produktivitet i fremtiden (bedre = længde, job = arbejdløshed)
-    prøv at få kapitlet "ideer om uni" på banen
-        ---Måske nævne det ovenover kort, og fremstil et perspektiv om uni er blevet udformet ud fra omgivelser og norm
+    Indstillingerne fra artiklen "akademisk chokkur" (det sidste afsnit på første side) er meget 
+    præget af at politikere skal sætte deres mærke, det er hovedsagen. Udover det er der også 
+    penge besparelse og en del påvirkning af vaglet (især for SU forslaget). Problemer med 
+    kommissionens forslag er at de måler kvaliteten af en uddannelse på dens lægnde og ikke
+    dens indhold som der også bliver på peget i artiklen. Mere end det bliver der også på
+    peget at højst sandsynligt vil arbejdgivere ikke hellere hyre 1 års kandidater frem for
+    de almindelige 2 års kandidater, hvilket er forståeligt da jo mere uddannelse jo
+    dygtigere er man oftes. 
+    Derfor giver det heller ikke mening at de vil forbedre uddannelserne med at gøre dem kortere,
+    igen ændring af indholdet af uddannelserne ville være bedre hvis ikke uddannelserne skal 
+    forlænges.
+    Ud fra reformkommissionens 3 temaer gennem de 2 år er der sket en forandring, hvor i 2020
+    blev der fokuseret en god portion på jobs, mens i 2022 var fokuset høj velstand og 
+    produktivitet i fremtiden. Så længde er bedre og de kigger meget på job aspektet, måske
+    for at formindske arbejdløshed.
+    Det første afsnit på første side er indstillinger fra kapitlet "ideer om uni", et fælles
+    træk ved de fremhævet indstilliger er at universitetet bliver udformet ud fra omgivelser
+    og norm i den tid man befinder sig i.
 
-    Hovedbudskab ændring
+    Som en lignende afslutning, kan der siges at hovedbudskabet er ændring, med dette menes der er 
+    universitet ændrer sig ret meget, fordi de bliver påvirket af udefra faktore, enten af dem der
+    styrer and har magten i tiden som kirken i middelalderen der dominerede, eller af nye 
+    revolutionerende tanker. Ellers af normen i samfundet, af den bestemmende administration og eller
+    nuværende problemer.
+
 Referencer:
     reformkommision link
     "ideer om uni" kapitlet
     "akademisk chokkur" artiklen
-
-    ---------------------------------Indledning: påvirkning
