@@ -53,7 +53,7 @@ def parse(contents, filename): #, date
             id="graph_choice",
             options=[{'label': 'bar-graph', 'value': 'bar'},
                      {'label': 'heat-map', 'value': 'map'},
-                     {'label': 'scatter-plot', 'value': 'scatter'}], 
+                     {'label': 'scatter-plot', 'value': 'scatter'}], #,{'label': 'mapbox', 'value': 'box'}
             value='bar'
         ),
         html.Hr(), 
@@ -125,6 +125,11 @@ def graph_maker(n, chosen_graph, data, x_val, y_val): #, color
     #elif color == 'red':
         #fig4 = px.scatter(data, x=x_val, y=y_val) 
         #return dcc.Graph(figure=fig4)
+    #elif chosen_graph == 'box':
+        #fig5 = px.density_mapbox(data, lat='Latitude', lon='Longitude', z='Magnitude', radius=10,
+                        #center=dict(lat=0, lon=180), zoom=0,
+                        #mapbox_style="stamen-terrain")
+        #return dcc.Graph(figure=fig5)
 
 if __name__ == '__main__':
     app.run_server(debug=True) #host='0.0.0.0' og port=8000
