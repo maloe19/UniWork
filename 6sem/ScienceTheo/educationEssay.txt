@@ -3,10 +3,10 @@ Forside
     Obligatorisk opgave: opgave 3
     Kursus: Ingeniørfagets videnskabsteori
     Semester: foråret 2022
-    Dato: 1- juni 2020
+    Dato: 1. juni 2022
 Side 1: 
     Ideen om universitetet (eller bare vidregående uddannelser) startede i middelalderen omkring årtiet 1200, 
-    her i denne tid dominerede kirken.Det er derfor de etablerede de første universiteter, også fra før 
+    her i denne tid dominerede kirken. Det er derfor de etablerede de første universiteter, også fra før 
     den tid blev munkene set som de skriftkloge, siden de kunne læse og skrive (det var et krav), og dermed
     blev de også ofte lærere/undervisere især for de riges børn(adlen). I denne fødsels stadie, blev der kun
     undervist teologi (selvfølgelig), medicin, jura og filosofi.
@@ -35,7 +35,7 @@ Side 1:
     uddannelserne forringes er fordi den danske uddannelsemodel er forældet. Måden de har tænkt
     sig at infører dette er at lave mindre pladser på den 2 årig kandidat så flere bliver nødt til
     at tage den 1 årige, dermed sparer staten også penge siden uddannelserne bliver kortere.
-    Forslaget om SU handler om at kandidater ikke længere skal have SU, men Su skal erstattes med 
+    Forslaget om SU handler om at kandidater ikke længere skal have SU, men SU skal erstattes med 
     lån, og så vil staten sparer penge ved SU fjernelsen og uddannelserne vil dermed blive bedre.
     Kommissionens forslag om karaktere er for at forhindre den etense Karakterræs der foregår i 
     gymnasiet især, så de foreslår at universitet uddannelser ikke må kræve et karaktergennemsnit
@@ -60,6 +60,22 @@ Side 2-3
     Det første afsnit på første side er indstillinger fra kapitlet "ideer om uni", et fælles
     træk ved de fremhævet indstilliger er at universitetet bliver udformet ud fra omgivelser
     og norm i den tid man befinder sig i.
+
+    meninger: om alle emner
+        kapitlet: hav konstanse i indhold, lad være med at skifte indhold baseret på moderne
+        reformkommision: istedet for at kigge på alle mulige udafvendte faktor kig på de studerende (de er fremtiden)
+        artikel: 
+            SU er et nøglepunkt for Danmark, det ville være fordærdeligt dumt at fjerne det
+            Karakterræs lad vær med at ændre karakterkrav det er hele årsagen
+            kand på halv tid: ja mange folk er træt af skole (fordi de starter så tidligt), lad børn være børn, og skær at det unødvendige af fra folkeskole og gym
+    pointer: 
+        penge 
+        forskning = tænker på sig selv, 
+        udover indholdet af uddannelserne skal strukturen nok også ændres for at forhindre Karakterræs (andet end det de har forslaget)
+        behøver ikke ligne andre lande DK er unikt
+        undervisere er ikke rigtig undervisere (kan være en grund til dårlig uddannelser)
+    husk inddrag ting fra pp's!!!!!!!!!!!!!!!!!
+    for og imod synspynkterne
 
     Som en lignende afslutning, kan der siges at hovedbudskabet er ændring, med dette menes der er 
     universitet ændrer sig ret meget, fordi de bliver påvirket af udefra faktore, enten af dem der
