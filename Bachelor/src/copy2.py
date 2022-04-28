@@ -7,11 +7,11 @@ import plotly.express as px     # pip install plotly==5.2.2
 import pandas as pd             # pip install pandas
 # Data: https://www.dallasopendata.com/Services/Animals-Inventory/qgg6-h4bd
 
+#df = pd.read_csv('coordinates - Kopi.csv')
 df = pd.read_csv("https://raw.githubusercontent.com/Coding-with-Adam/Dash-by-Plotly/master/Analytic_Web_Apps/Excel_to_Dash_Animal_Shelter/Animals_Inventory.csv")
 df["intake_time"] = pd.to_datetime(df["intake_time"])
 df["intake_time"] = df["intake_time"].dt.hour
 print(df.head())
-
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
@@ -26,14 +26,17 @@ app.layout = html.Div([
                      options=[{'label': x, 'value': x} for x in
                               df["animal_type"].unique()]),
     ],className="two columns"),className="row"),
-
+        #dcc.Dropdown(id='x_axis', options=[{'label':x, 'value':x} for x in df.columns]),
+    #])),
+    #],className="two columns"),className="row"),
     html.Div(id="output-div", children=[]),
 ])
 
 
 @app.callback(Output(component_id="output-div", component_property="children"),
               Input(component_id="animal-type", component_property="value"),
-)
+) #Input(component_id="animal-type", component_property="value"),
+#Input(component_id="x_axis", component_property="value"),
 def make_graphs(animal_chosen):
     # HISTOGRAM
     df_hist = df[df["animal_type"]==animal_chosen]

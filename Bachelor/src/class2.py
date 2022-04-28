@@ -1,3 +1,4 @@
+from numpy import source
 import plotly.express as px
 from dash import Dash, dash_table, html, dcc, Input, Output, State
 import pandas as pd
@@ -5,6 +6,8 @@ import io
 import base64
 import dash
 #import datetime
+#import plotly.graph_objects as go
+#import numpy as np
 
 #colors = px.colors.named_colorscales()
 stylesheet = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
@@ -53,7 +56,10 @@ def parse(contents, filename): #, date
             id="graph_choice",
             options=[{'label': 'bar-graph', 'value': 'bar'},
                      {'label': 'heat-map', 'value': 'map'},
-                     {'label': 'scatter-plot', 'value': 'scatter'}], #,{'label': 'mapbox', 'value': 'box'}
+                     {'label': 'scatter-plot', 'value': 'scatter'},
+                     {'label': 'mutiple', 'value': 'analysis'}
+                     ,{'label': 'destiny', 'value': 'contour'}
+                     ], #,{'label': 'mapbox', 'value': 'box'}
             value='bar'
         ),
         html.Hr(), 
@@ -77,6 +83,7 @@ def parse(contents, filename): #, date
         dcc.Dropdown(id='y_axis', options=[{'label':x, 'value':x} for x in df.columns]),
         html.Button(id='make_graph', children="Make Graph"),
         html.Hr(),
+        #dcc.Dropdown(id='type', options=[{'label':x, 'value':x} for x in df.columns],className="two columns",className="row"),
 
         dash_table.DataTable(
             data=df.to_dict('records'),
@@ -129,7 +136,70 @@ def graph_maker(n, chosen_graph, data, x_val, y_val): #, color
         #fig5 = px.density_mapbox(data, lat='Latitude', lon='Longitude', z='Magnitude', radius=10,
                         #center=dict(lat=0, lon=180), zoom=0,
                         #mapbox_style="stamen-terrain")
+        #fig5 = px.density_mapbox(data, x=x_val, y=y_val)
         #return dcc.Graph(figure=fig5)
+
+    elif chosen_graph == 'analysis':
+        #Histogram
+        fig_hist = px.histogram(data, x=x_val, y=y_val)
+        #Strip chart
+        fig_strip = px.strip(data, x=x_val, y=y_val)
+        #Sunburst
+        #fig_sunburst = px.sunburst(data, x=x_val, y=y_val)
+        fig_sunburst = px.sunburst(data, path=["x", "y", "timestamp"])
+        #Empirical Cumulative Distribution
+        fig_ecdf = px.ecdf(data, x=x_val, y=y_val)
+        #Line chart
+        fig_line = px.line(data, x=x_val, y=y_val)
+        return [
+        html.Div([
+            html.Div([dcc.Graph(figure=fig_hist)], className="six columns"),
+            html.Div([dcc.Graph(figure=fig_strip)], className="six columns"),
+        ], className="row"),
+        html.H2("Types", style={"textAlign":"center"}),
+        html.Hr(),
+        html.Div([
+            html.Div([dcc.Graph(figure=fig_sunburst)], className="six columns"),
+            html.Div([dcc.Graph(figure=fig_ecdf)], className="six columns"),
+        ], className="row"),
+        html.Div([
+            html.Div([dcc.Graph(figure=fig_line)], className="twelve columns"),
+        ], className="row"),
+    ]
+    elif chosen_graph == 'contour':
+        fig1_contour = px.density_contour(data, x=x_val, y=y_val)
+        fig2_contour = px.density_contour(data, x=x_val, y=y_val)
+        fig2_contour.update_traces(contours_coloring="fill", contours_showlabels = True)
+        #x1=x_val
+        #y1=y_val
+        #x1 = np.uniform(x_val) #np.random.uniform
+        #y1 = np.uniform(y_val) 
+        #fig3_contour = go.Figure(go.Histogram2dContour(x=x1, y=y1))
+        #fig3_contour = go.Figure(go.Histogram2dContour(x=x_val, y=y_val))
+        #
+        #fig3_contour = px.density_contour(data, x=x_val, y=y_val, colorscale='Blues')
+        #fig3_contour = px.density_contour(data, x=x_val, y=y_val, color='Blues')
+        #
+        fig3_contour = px.density_contour(data, x=x_val, y=y_val)
+        fig3_contour.update_layout(template="plotly_white")
+        fig3_contour.add_layout_image(
+            dict(
+                source="https://images.plot.ly/language-icons/api-home/python-logo.png",
+                opacity=1,
+                layer="below")
+        )
+        return [html.Div([ dcc.Graph(figure=fig1_contour),  dcc.Graph(figure=fig2_contour), dcc.Graph(figure=fig3_contour) ])]#, dcc.Graph(figure=fig3_contour)
+
+#@app.callback(Output('output', 'children'), Input('type', 'value'))
+#def make_graph(graph_chosen, contents, xVal):
+    #string_content = contents.split(',')
+    #decoder = base64.b64decode(string_content)
+    #df = pd.read_csv(io.StringIO(decoder.decode('utf-8')))
+
+    # HISTOGRAM
+    #df_hist = df[df["type"]==graph_chosen]
+    #fig_hist = px.histogram(df_hist, x=xVal)
+    #fig_hist.update_xaxes(categoryorder="total descending")
 
 if __name__ == '__main__':
     app.run_server(debug=True) #host='0.0.0.0' og port=8000
