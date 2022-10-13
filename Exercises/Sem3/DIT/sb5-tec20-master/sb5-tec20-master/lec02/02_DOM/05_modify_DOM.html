@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<p>Ciao</p>
+	<ul>
+		<li>a</li>
+		<li>b</li>
+		<li>c</li>
+	</ul>
+	
+<script>
+function main() {
+	console.log("Starting...");
+	
+	// returns an array of elements
+	// see: https://developer.mozilla.org/en-US/docs/Web/API/Element.getElementsByTagName
+	let LIs = document.getElementsByTagName("li"); 
+	
+	// remove an element
+	let firstLI = LIs[0];
+
+	// NOTE: removing would be much more complex without the possibility to access parent node!
+	let parentUL = firstLI.parentNode; 
+
+	parentUL.removeChild(firstLI);
+	console.log( document );
+
+	// then we insert a new <P> as last element of the UL
+	let newP = document.createElement("p");
+	newP.innerHTML = "Testing ... 1,2,3 ... <a href='https://www.sdu.dk'>SDU</a>";
+	parentUL.appendChild(newP);
+	
+	/* try to use  insertBefore()  to modify the code above, and place the new <P> element 
+	 * as the first in the UL
+	 * For the specs of insertBefore(), see: 
+	 *   https://developer.mozilla.org/en-US/docs/Web/API/Node.insertBefore
+	 */
+}
+
+// try commenting the following line
+main();
+</script>	
+</body>
+</html>

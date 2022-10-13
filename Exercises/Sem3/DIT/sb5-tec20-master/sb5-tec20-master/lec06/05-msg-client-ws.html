@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            window.addEventListener("load", () => {
+                let ws = new WebSocket("ws://localhost:8080/");
+                ws.onopen = () => console.log("connected");
+                ws.onclose = () => console.log("disconnected");
+                ws.onerror = e => console.log("Something went wrong:", e);
+                ws.onmessage = event => { 
+                    let json = JSON.parse(event.data);
+                    let node = document.createTextNode(json.time + " " + json.msg);
+                    let div = document.createElement("div");
+                    div.appendChild(node);
+                    document.body.appendChild(div); };
+            });
+        </script>
+    </head>
+    <body>
+        <hr>
+    </body>
+</html>

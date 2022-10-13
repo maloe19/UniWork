@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            let f = async x => x+x;
+            console.log(f(42));
+            
+            async function doit() {
+                let tmp = await f(10.5);
+                tmp = await f(tmp);
+                console.log(tmp);
+            }
+            doit();
+        </script>
+    </head>
+</html>

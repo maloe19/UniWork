@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() => {
+        $.getJSON("myfile.json", data => {
+            let items = [];
+            $.each(data, (key, val) => {
+                items.push( "<li id='" + key + "'>" + val + "</li>" );
+            });
+
+            $("<ul/>", {
+                "class": "my-new-list",
+                html: items.join("")
+                }).appendTo("body");
+            });
+        });
+    </script>
+</head>
+    <body>
+        <h1>AJAX reads json</h1>
+    </body>
+</html>
+

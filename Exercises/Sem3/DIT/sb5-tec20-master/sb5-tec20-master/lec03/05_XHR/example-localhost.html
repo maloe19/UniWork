@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    function myHandler() {
+        if (this.status == 200) {
+            // here I'm sure the XHR message has come from the server
+            document.getElementById("theData").innerHTML = this.responseText;
+            let obj = JSON.parse(this.responseText);
+            console.log(obj);
+            console.log(obj.one);
+        }
+    }
+    window.addEventListener("load", () => {
+        let req = new XMLHttpRequest();
+        req.addEventListener("load", myHandler);
+        req.open("GET", "myfile.json"); // optional 3rd arg
+        req.send();
+	});
+</script>
+</head>
+<body>
+    <h1>AJAX reads local JSON</h1>
+	<div id="theData"></div>
+</body>
+</html>

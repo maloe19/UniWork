@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>In Chrome, open:</h1>
+<br/>Tools->developer tools->console 
+<br/>to see the output
+<script>
+
+// automatic conversions VS explicit conversions
+let a;
+a = 10 + " objects" 	// => "10 objects". Number 10 converts to a string
+console.log( a );
+
+a = "7" * "4";			// => 28: both strings convert to numbers
+console.log( a );
+
+let n = 1 - "x";				// => NaN: string "x" can't convert to a number
+console.log( n + " objects" )	// => "NaN objects": NaN converts to string "NaN"
+
+
+
+// explicit conversions:
+let x = 10;
+let b;
+a = String(false); 	// => "false" Or use false.toString()
+b = x + ""; 		// Same as String(x)
+console.log( a, b+5 );
+
+n = 17;
+let binary_string = n.toString(2); 		// Evaluates to "10001"
+console.log( n , binary_string );
+
+console.log( parseInt("3 blind mice") ); 	// => 3
+console.log( parseFloat(" 3.14 meters") ); 	// => 3.14
+
+
+// more examples of literals
+let aaa;
+aaa = 12; 								// The number twelve
+aaa = 1.2;						 		// The number one point two
+aaa = "hello world";  					// A string of text
+aaa = 'Hi';								// Another string
+aaa = 'You\'re right, it can\'t be a quote';  	// String literal with escape sequences
+console.log( aaa );
+aaa = true; 								// A Boolean value
+aaa = null; 								// Absence of an object
+
+// typeof
+console.log( "What is the type of 12? " + typeof(12) ); 
+console.log( typeof 12.5 ); // try with other literals or variables
+
+</script>
+</body>
+</html>

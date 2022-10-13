@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            tr:nth-child(even) { background: #CCC }
+            tr:nth-child(odd)  { background: #FFF }
+            tr:hover           { background: #FCC }
+        </style>
+        <script>
+            window.addEventListener("load", setupPage);
+            
+            let usertable;
+            let updatebutton, deletebutton;
+            
+            function updateUser() {
+                let name = document.getElementById("name").value;
+                if (confirm("Update user '" + name + "'?")) {
+                    console.log('update', name);
+                    // TODO: create fetch PUT request
+                }
+            }
+            
+            function deleteUser() {
+                let name = document.getElementById("name").value;
+                if (confirm("Delete user '" + name + "'?")) {
+                    console.log('delete', name);
+                    // TODO: create fetch DELETE request
+                }
+            }
+            
+            function getUser(i) {
+                console.log("clicked", i);
+                fetch("http://jsonplaceholder.typicode.com/users/" + String(i))
+                 .then(resp => { if (resp.status == 200) { return resp.json() }})
+                 .then(displayUser);
+            }
+            
+            function displayUser(user) {
+                document.getElementById("id").innerText = user.id;
+                document.getElementById("name").value = user.name;
+                document.getElementById("username").value = user.username;
+                document.getElementById("email").value = user.email;
+                document.getElementById("company").value = user.company.name; 
+                updatebutton.disabled = false;
+                deletebutton.disabled = false;
+            }
+            
+            function setupPage() {
+                usertable = document.getElementById("usertable");
+                updatebutton = document.getElementById("update");
+                deletebutton = document.getElementById("delete");
+                updatebutton.disabled = true;
+                updatebutton.addEventListener("click", updateUser);
+                deletebutton.disabled = true;
+                deletebutton.addEventListener("click", deleteUser);
+
+                // build table and header
+                let tableelem = document.createElement("table");
+                let header = document.createElement("tr");
+                header.innerHTML = ("<td>Id</td> <td>Name</td> <td>Username</td>");
+                tableelem.appendChild(header);
+                usertable.appendChild(tableelem);
+
+                fetch("http://jsonplaceholder.typicode.com/users")
+                .then(resp => { if (resp.status == 200) { return resp.json() } })
+                .then(users => completeTable(users,tableelem))
+            }
+            
+            function completeTable(users, tableelem) {
+                for (user of users) {
+                    let row = document.createElement("tr");
+                    //console.log(user);
+                    for (p of ["id", "name", "username"]) {
+                        let datacell = document.createElement("td");
+                        datacell.innerText = user[p];
+                        row.appendChild(datacell);
+                    }
+                    let userid = user.id;
+                    row.addEventListener("click", () => getUser(userid));
+                    tableelem.appendChild(row);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>User database:</h1>
+        <div id="usertable"></div>
+        <hr/>
+        <div>
+        <h2>User file:</h2>
+            Id: <span id="id"></span><br/>
+            Name: <input type="text" id="name"><br/>
+            Username: <input type="text" id="username"><br/>
+            Email: <input type="text" id="email"><br/>
+            Company: <input type="text" id="company"><br/>
+            <button id="update">Update</button>
+            <button id="delete">Delete</button>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Methods</h1>
+Look at the JavaScript console to see the output.
+
+<script>//adapted from Eloquent JavaScript, chapter 6
+let doSpeak = function (line) {
+  console.log("The " + this.type + 
+			" rabbit says '" +
+              line + "'");
+};
+
+let whiteRabbit = { type: "white", speak: doSpeak };
+let fatRabbit =   { type: "fat", speak: doSpeak };
+
+whiteRabbit.speak("i'm white");
+// -> The white rabbit says 'Oh my ears and whiskers, how
+//   late it's getting!'
+fatRabbit.speak("I could sure use a carrot right now.");
+// -> The fat rabbit says 'I could sure use a carrot
+//   right now.'
+</script>
+</body>
+</html>

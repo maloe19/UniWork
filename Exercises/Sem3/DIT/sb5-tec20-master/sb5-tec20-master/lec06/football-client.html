@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body { background-color: lightgreen; }
+            div { 
+                border: 5px solid black;
+                margin: 10px;
+                padding: 10px;
+                width: 50%;
+                text-align: center;
+                background-color: beige;
+            }
+            span {
+                padding: 3px;
+                font-weight: bolder;
+                font-size: larger;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Football standings</h2>
+        <p>
+            <div>
+                Home <span id="standings">1 - 0</span> Away
+            </div>
+            Reload page to update standings (FIXME: replace with polling)
+        </p>
+    </body>
+    <script>
+        window.onload = () => {
+            fetch("http://localhost:8080")
+            .then(res => res.json())
+            .then(json => { 
+                document.getElementById("standings").textContent = json.home + " - " + json.away;
+            })
+        }
+    </script>
+</html>

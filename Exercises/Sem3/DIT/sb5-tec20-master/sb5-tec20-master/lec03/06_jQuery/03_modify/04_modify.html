@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script>
+	$(document).ready(() => {
+		// append a new SPAN to all LIs at once
+		$('li').append( $('<span> test!</span>') );
+		/* how to make the span parametric?
+		   how to give a progressive number to each of the spans? */
+		$('span').attr("id", (index, oldValue) => "span_id_" + index);
+		// The above is an example of setting attributes with value-callbacks
+		// Where does the  index  parameter come from?		
+	});
+    </script>
+</head>
+<body>
+	<p>Ciao</p>
+	<ul>
+		<li>a</li>
+		<li>sub list:
+			<ul>
+				<li>x</li>
+				<li>y</li>
+			</ul>
+		</li>
+		<li>c</li>
+	</ul>
+</body>
+</html>

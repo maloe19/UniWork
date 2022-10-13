@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <script>
+	window.onload = () => {
+		let button = document.getElementById("theButton");
+		button.addEventListener("click", () => {
+			document.getElementById("theOutput").innerHTML += "<br/>Button clicked.";
+			console.log("Button clicked.");
+		});
+	};	
+    </script>
+</head>
+<body>
+    <p>A much cleaner version: JavaScript and HTML are now separated! All style info is in a separate file too.
+	<br/>Note how the onload event is used to have a function called at the right moment...</p>
+    <button id="theButton">click me</button>
+    <p id="theOutput">Something more</p>
+</body>
+</html>

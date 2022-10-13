@@ -1,0 +1,15 @@
+{
+  "author": "Jan Midtgaard",
+  "name": "my-node-project",
+  "description": "Jan's node project",
+  "version": "1.0.0",
+  "main": "18-node-proj.js",
+  "scripts": {
+    "build": "tsc 18-node-proj.ts"
+  },
+  "dependencies": {},
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^12.7.8"
+  }
+}

@@ -1,0 +1,14 @@
+# This starts a nginx webserver from a pre-built image.
+#
+# The server listens on port 8080 on your machine, 
+# but this is forwarded to port 80 (the standard HTTP port) in the container.
+#
+# The server will serve files from the current directory "./".
+web:
+  image: nginx
+  volumes:
+   - ./:/usr/share/nginx/html:ro
+  ports:
+   - "8080:80"
+  environment:
+   - NGINX_PORT=80

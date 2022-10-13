@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script>
+	$(document).ready(() => {
+		// just brutally create a couple of new HTML element!
+		$('<a href="#comeHere">click me please</a>').prependTo('body');
+        for (let i=0; i<25; i++) $('<p>klnknasfdfasf<p/>').appendTo('body');
+		$('<div id="comeHere">Link target</div>').appendTo('body');	
+	});
+    </script>
+</head>
+<body>
+	<p>Ciao</p>
+	<ul>
+		<li>a</li>
+		<li>sub list:
+			<ul>
+				<li>x</li>
+				<li>y</li>
+			</ul>
+		</li>
+		<li>c</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	#theButton {
+		text-align: center;
+		color: white;
+		background-color: red;
+	}
+	</style>
+    <script>
+    function myHandler() {
+        document.getElementById("theOutput").innerHTML += "<br/>Button clicked.";
+        console.log("Button clicked.");
+    }
+    </script>
+</head>
+
+<body style="color: gray;background-image:url(fractal_10.jpg);background-size: 100%;">
+
+    <p>Something something</p>
+    <button id="theButton" onclick="myHandler();">click me</button>
+    <p id="theOutput">Something more</p>
+</body>
+</html>

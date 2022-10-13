@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<script>
+	function loadAll(key) {
+		let result;
+        // Retrieve the object from storage
+        let retrievedObject = localStorage.getItem(key);
+        if (retrievedObject){
+            result = JSON.parse(retrievedObject);
+            console.log("data loaded!");
+        }
+		return result;
+	}
+	window.onload = () => {	
+		let someData = loadAll("abc123");
+		console.log(someData);
+		
+		let tableNode = document.createElement("table");
+		tableNode.id = 'myTable';
+		document.body.appendChild(tableNode);
+		
+		let table = document.getElementById("myTable");
+		table.innerHTML = "<tr><th>name</th><th>age</th></tr>";
+		if (someData) {
+            for (let i=0;i<someData.length;i++) {
+			     table.innerHTML += "<tr>"+
+							   "<td>"+someData[i].name+"</td>"+
+							   "<td>"+someData[i].age+"</td>"+
+							   "</tr>";
+            }
+        }
+	};
+</script>
+<body>
+    <h1>Persistent localStorage</h1>
+    Read data from the local storage.
+</body>
+</html>

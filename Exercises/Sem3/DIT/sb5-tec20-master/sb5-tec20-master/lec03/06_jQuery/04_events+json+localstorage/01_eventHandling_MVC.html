@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .button {
+            padding:5px;
+            background-color: #dcdcdc;
+            border: 1px solid #666;
+            color:#000;
+            text-decoration:none;
+            width: 50px;
+            text-align: center;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script>
+	// === holds page data ===
+	class Data {
+        constructor() {
+            this.value = 50;
+            this.visualize();
+        }
+		visualize() {
+			let $visual = $("#visualization");
+			let stars = "";
+			for (let i=0;i<this.value;i++){
+				if (i % 10 == 0){
+					stars += ".";
+				} else stars += "*";
+			}
+			$visual.text("value is " + this.value)
+				.append( "<p>"+stars+"</p>" );
+		}
+		add(n) {
+			this.value += n;
+			this.visualize();
+		}
+	}
+	
+	$(document).ready(() => {
+		// === initialization of data =================
+		let myData = new Data();
+		myData.visualize();
+		// === setup UI ===============================
+		$("#plus").addClass("button").click(event => {
+			myData.add( +1 );
+		});
+		$("#minus").addClass("button").click(event => {
+			myData.add( -1 );
+		});
+		$(".button").mousedown(event => { // prevent selection
+			event.preventDefault();
+		});
+	});
+</script>
+<body>
+<h1>Data + Visual + UI (mini-example)</h1>
+<p id="plus">[+1]</p>
+<p id="minus">[-1]</p>
+<p id="visualization"></p>
+</body>
+</html>

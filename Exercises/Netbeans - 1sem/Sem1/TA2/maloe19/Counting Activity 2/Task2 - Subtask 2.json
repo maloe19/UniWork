@@ -1,0 +1,20 @@
+{
+  "id": 5,
+  "store_name": "Tundra Motors",
+  "founded_date": 1995,
+  "inventory": [
+      {
+          "manufracturer_name": "Kia",
+          "model_number": 360,
+          "weight": "1000 kg",
+          "sold": true
+      }
+      {
+          "manufracturer_name": "Fiat",
+          "model_number": 500,
+          "weight": "1100 kg",
+          "sold": false
+      }
+   ],
+  "Employees": ["Jake", "Bob", "Jane"]
+}

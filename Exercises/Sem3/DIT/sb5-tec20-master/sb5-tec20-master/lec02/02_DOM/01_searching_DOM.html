@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<style>
+	.selected {
+  		background-color: #ff0000;
+  		color: #0000ff;
+	}
+	.verySelected {
+  		background-color: #0000FF;
+  		color: #FF0000;
+	}
+	</style>
+  </head>
+<body>
+	<p>Ciao</p>
+	<ul>
+		<li>a</li>
+		<li>b</li>
+		<li>c</li>
+	</ul>
+	
+<script>
+function doIt(){
+	console.log("Starting...");
+	
+	// returns a collection of elements
+	// see: https://developer.mozilla.org/en-US/docs/Web/API/Element.getElementsByTagName
+	let LIs = document.getElementsByTagName("li"); 
+	
+	for (let i=0; i<LIs.length; i++){
+		console.log( LIs[i] );
+		LIs[i].className = "selected";
+	}
+
+	// last
+	LIs[LIs.length-1].className = "verySelected";
+}
+
+// try commenting the following line in
+doIt();
+</script>	
+</body>
+</html>

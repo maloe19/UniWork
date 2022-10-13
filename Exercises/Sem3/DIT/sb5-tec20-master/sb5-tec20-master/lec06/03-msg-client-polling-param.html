@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            let time = 0;
+            window.addEventListener("load", () => poll());
+           
+            function poll() {
+                fetch("http://localhost:8080?time=" + time)
+                .then(res => res.json())
+                .then(json => {
+                    if (json.time) {
+                        time = json.time;
+                        let div = document.createElement("div");
+                        document.body.appendChild(div);
+                        let node = document.createTextNode(time + ": " + json.msg);
+                        div.appendChild(node);
+                    } else {
+                        console.log("nothing new since " + time);
+                    }})
+                .then(() => setTimeout(poll, 5000))
+                .catch(rej => console.log("Something went wrong:", rej));
+            }
+        </script>
+    </head>
+    <body>
+        <hr>
+    </body>
+</html>

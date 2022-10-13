@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            fetch("http://jsonplaceholder.typicode.com/users/1",
+                  { method : "PUT",
+                    body : JSON.stringify({ id : 2, name : "foobar"}),
+                    headers: { "Content-type": "application/json" }})
+            .then(resp => console.log(resp.status));
+        </script>
+    </head>
+</html>

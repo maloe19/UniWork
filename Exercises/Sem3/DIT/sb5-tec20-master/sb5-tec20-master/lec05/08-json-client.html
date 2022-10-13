@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A JSON client</title>
+    </head>
+    <body>
+        <input type="text"><br/>
+        output: <span id="output"></span>
+        <script>
+        let text = document.querySelector("input");
+        let output = document.querySelector("#output");
+        text.addEventListener("input", () => {
+            output.textContent = "";
+            fetch("http://localhost:8080/users/" + text.value)
+            .then(v => v.status == 200 ? v.text() : v.statusText)
+            .then(v => output.textContent = v)
+            .catch(e => output.textContent = e.message)
+        });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+    function myHandler() {
+        if (this.status == 200) {
+            // here I'm sure the XHR message has come from the server
+            let obj = JSON.parse(this.responseText);
+            let str = "";
+            for (let p in obj) {
+                console.log(p, obj[p]);
+                str = str + obj[p].name + " " + obj[p].email + "<br/>";
+            }
+            let elem = document.getElementById("theData");
+            elem.innerHTML = str;
+        }
+    }
+	window.addEventListener("load", () => {
+        let req = new XMLHttpRequest();
+        req.addEventListener("load", myHandler);
+        req.open("GET", "https://jsonplaceholder.typicode.com/users");
+        req.send();
+	});
+</script>
+</head>
+<body>
+    <h1>AJAX reads remote JSON</h1>
+	<div id="theData"></div>
+</body>
+</html>

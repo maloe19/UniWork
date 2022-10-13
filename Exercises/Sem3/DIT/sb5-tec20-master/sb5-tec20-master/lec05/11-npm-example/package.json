@@ -1,0 +1,11 @@
+{
+  "author": "Jan Midtgaard",
+  "name": "test-project",
+  "description": "Jan's test project",
+  "version": "1.0.0",
+  "main": "main.js",
+  "dependencies": {
+    "upper-case": "^1.1.3"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,9 @@
+FROM ubuntu
+
+COPY ./l6e1.py /mnt/c/github/lab/
+
+RUN apt-get update
+
+RUN apt-get install python3 -y
+
+CMD python3 /mnt/c/github/lab/l6e1.py

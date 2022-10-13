@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	.theCar {
+		border-style: solid;
+		border-width: 1px;
+		color: blue;
+	}
+	</style>
+<script>
+// carArray will hold our data about cars
+let carArray = [];
+
+// TO DO: save data in the local storage
+function saveData() { /*...*/ };
+
+/* TO DO: load car data from the local storage: 
+   - if there are data to read: load them into the carArray array
+   - if not, leave the carArray empty */
+function loadData() { /*...*/ };
+
+function refreshList() {
+    let list = document.getElementById("listOfCars");
+    let text = "";
+    for (let index in carArray) {
+        text += carArray[index].producer + " | " + carArray[index].name + "<br/>";
+    }
+    list.innerHTML = text;
+};
+
+window.onload = () => {	
+    let addBtn = document.getElementById("addButton");
+	addBtn.addEventListener("click", () => {
+		let theCarProducer = document.getElementById("carProducer");	
+		let theCarName = document.getElementById("carName");
+		carArray.push({producer : theCarProducer.value,
+				       name     : theCarName.value });
+		theCarName.value = "";
+		theCarProducer.value = "";
+		console.log( "button clicked -> car added");
+		saveData();
+		refreshList();
+	});
+    loadData();
+	refreshList();
+};
+</script>
+</head>
+<body>
+    <h1>Car Page</h1>
+    <p><b>Here you can:</b></p>
+    <ul>
+        <li>add a new car, by typing producer and model name.</li>
+        <li>the list of existing cars refreshes automatically each time you add a new car.</li>
+        <li>Try to reopen the page, and you should still see the cars you added before!</li>
+    </ul>
+    <hr/>
+    <div>The input form
+	   <br/>Car Producer: <input type="text" id="carProducer" value="">
+	   <br/>Car Name: <input type="text" id="carName" value="">
+	   <button type="button" id="addButton">[add]</button>
+    </div>
+    <hr/>
+    <div id="listOfCars">...</div>
+    <hr/>
+    <p><button type="button" id="resetButton">[resetAllCars]</button></p>
+</body>
+</html>

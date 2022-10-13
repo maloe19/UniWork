@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Some page</h1>
+        <p>Hello, world!</p>
+        <script>
+            let para = document.createElement("p");
+            let tnode = document.createTextNode("some text");
+            para.appendChild(tnode);
+            document.body.appendChild(para);    
+            // try commenting these in
+            /*
+            tnode.remove();
+            para.innerHTML = "<strong>Yes!</strong>";
+            */
+            /*
+            document.body.insertBefore(tnode,para);
+            */
+            /*
+            let an = document.createTextNode("another text");
+            document.body.replaceChild(an,tnode);
+            */
+        </script>
+    </body>
+</html>

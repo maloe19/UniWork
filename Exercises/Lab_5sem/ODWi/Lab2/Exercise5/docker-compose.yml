@@ -1,0 +1,11 @@
+version: '3'
+services: 
+  sql: #db
+    build: #path
+    #insert --default-authentication-plugin=mysql_native_password
+  web: 
+    depends_on:
+    - sql
+    build: #path
+    ports: 
+    - '5050:80'

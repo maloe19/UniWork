@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	#theButton {
+		text-align: center;
+		color: white;
+		background-color: red;
+	}
+	body {
+		color: darkgray;
+		background-image:url(imgs/fractal_10.jpg);
+		background-size: 100%;
+	};
+	</style>
+</head>
+<body>
+    <p>A cleaner version: the <b>event handler</b> function is attached to the button via JavaScript, so the
+    HTML code has no longer any scripting in it!
+	<br/>And to do this we need to pass a function as a parameter to another function, by reference :)</p>
+    <button id="theButton">click me</button>
+    <p id="theOutput">Something more</p>
+	
+    <script>
+	let button = document.getElementById("theButton");
+	button.addEventListener("click", () => {
+			document.getElementById("theOutput").innerHTML += "<br/>Button clicked.";
+			console.log("Button clicked.");
+		}
+	);
+    </script>
+</body>
+</html>

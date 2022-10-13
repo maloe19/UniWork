@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+  // easy input using a form
+  let a = 0;
+  let b = 0;
+
+  function computeResult(){
+     console.log( a+b*10 );
+  }
+  </script>
+</head>
+<body>
+  <h1>Computing a + b * 10</h1>
+  <form>
+  Enter the value for a:
+  <input type="text" value="0" onchange="a=parseInt(this.value);"/>
+
+  <br/>
+  Enter the value for b:
+  <input type="text" value="0" onchange="b=parseInt(this.value);"/>
+
+  <br/>
+  <input type="button" value="Compute the result" onclick="computeResult();"/>
+  </form>
+
+  <p>[Open the JavaScript console to see the result]</p>
+</body>
+</html>

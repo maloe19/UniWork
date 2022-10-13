@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MyStore@localhost">
+  <database-model serializer="dbm" dbms="MONGO" family-id="MONGO" format-version="4.17">
+    <root id="1">
+      <ServerVersion>4.2.6</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="MyStore">
+      <Current>1</Current>
+    </schema>
+    <schema id="3" parent="1" name="MyWebsite"/>
+    <schema id="4" parent="1" name="admin"/>
+    <schema id="5" parent="1" name="config"/>
+    <schema id="6" parent="1" name="local"/>
+    <table id="7" parent="2" name="Products"/>
+  </database-model>
+</dataSource>

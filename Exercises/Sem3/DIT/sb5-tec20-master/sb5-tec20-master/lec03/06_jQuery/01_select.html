@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .selected {
+            background-color: #ff0000;
+            color: #0000ff;
+        }
+        .verySelected {
+            background-color: #0000FF;
+            color: #FF0000;
+        }
+        .even {
+            border-style: dotted;
+        }
+    </style>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+	   $(document).ready(() => {
+		  $('li').addClass('selected');
+		  $('li').last().addClass('verySelected');
+	 
+		  $('li:even').addClass('even');
+	   	  // $('li:contains(a)').addClass('verySelected');	 
+	   });
+    </script>
+</head>
+<body>
+	<p>Ciao</p>
+	<ul>
+		<li>a</li>
+		<li>b</li>
+		<li>c</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title</title>
+<style>
+body {background-color:black}
+h1   {color: white;}
+p    {color: white;}
+label{color: white;}
+</style>
+</head>
+<body>                              
+
+<form method="POST">
+	<h1>New Album</h1>
+
+	<p>Name: (Floffy sweet tones)</p>
+	<input type="text">
+
+	<p>Release year:</p>
+	<input type="number">
+
+    <p>Artist:</p>
+    <select>
+        <option>M. Usic</option>
+        <option>Ballade salat</option>
+        <option>Square liar</option>
+    </select>
+
+	<p>Type:</p>
+	<input type="radio">
+	<label>Single</label><br>
+	<input type="radio">
+	<label>EP</label><br>
+	<input type="radio">
+	<label>Album</label>
+
+	<p>Description:</p>
+	<textarea rows="4" cols="50">Made in a icecube</textarea>
+
+	<p>Tracks:</p>
+	<button type="button" id="delete"> Trash</button>
+	<button type="button" id="save"> Add</button><br><br>
+	<!--onclick="document.getElementById('demo').innerHTML = Date()"-->
+	
+	<input type="text"  maxlength="10"><br>
+	<input type="text"  maxlength="10"><br>
+	<input type="text"  maxlength="10"><br>
+	<input type="text"  maxlength="10"><br>
+	<input type="text"  maxlength="10"><br>
+	<input type="text"  maxlength="10"><br>
+	<input type="text"  maxlength="10"><br>
+	<input type="text"  maxlength="10"><br>
+	<input type="text"  maxlength="10"><br>
+	<input type="text"  maxlength="10"><br><br>
+
+	<button type="button"> Submmit</button>
+</form>
+
+<script>
+	document.getElementById("delete").innerHTML = "Removed track";
+	document.getElementById("save").innerHTML = "The track have been registered";
+
+	//var a = [];
+	//a.push(argument)
+	//a.pop(argument)
+</script>
+
+</body>
+</html>
+
+

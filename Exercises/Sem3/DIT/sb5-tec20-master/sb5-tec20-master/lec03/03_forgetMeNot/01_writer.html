@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<script>
+	function saveAll(key,data) {
+        localStorage.setItem(key, JSON.stringify(data));
+        console.log("stored!");	
+	}
+	let someData = [{name:"andrea", age:44},
+                    {name:"alex",   age:10},
+                    {name:"marco",  age:35}];
+	window.onload = () => saveAll("abc123",someData);
+</script>
+<body>
+    <h1>Persistent localStorage</h1>
+    Write data into the local storage.
+</body>
+</html>

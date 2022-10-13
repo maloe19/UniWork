@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<script>
+	function remove(key) {
+        localStorage.removeItem(key);
+        console.log("erased!");
+	}
+	window.onload = () => remove("abc123");
+</script>
+<body>
+    <h1>Persistent localStorage</h1>
+    Erasing data in the local storage.
+</body>
+</html>

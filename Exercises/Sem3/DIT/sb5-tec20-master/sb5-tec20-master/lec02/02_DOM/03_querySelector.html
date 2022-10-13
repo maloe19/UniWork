@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    .animal {
+      color: orange;
+      font-size: 130%;
+    }
+    </style>
+  </head>
+<body>
+    <!-- lyrics from Jefferson Airplane - White Rabbit -->
+    <p>And if you go chasing
+        <span class="animal">rabbits</span></p>
+    <p>And you know you're going to fall</p>
+    <p>Tell 'em a <span class="character">hookah smoking
+        <span class="animal">caterpillar</span></span></p>
+    <p>Has given you the call</p>
+
+<script>
+  let count = (sel) => document.querySelectorAll(sel).length;
+  console.log("All <p> elements =", count("p"));          	// All <p> elements
+  // -> 4
+  console.log("Class animal =", count(".animal"));    		// Class animal
+  // -> 2
+  console.log("Animal inside of <p> =", count("p .animal"));	// Animal inside of <p>
+  // -> 2
+  console.log("Direct child of <p> =", count("p > .animal"));	// Direct child of <p>
+  // -> 1
+</script>
+</body>
+</html>

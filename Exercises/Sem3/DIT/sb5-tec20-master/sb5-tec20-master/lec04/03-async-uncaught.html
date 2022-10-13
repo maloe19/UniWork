@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <p>See console</p>
+        <script>
+            try {
+                setTimeout(() => { throw new Error("Woosh"); }, 20);
+            } catch (_) {
+                // This will not run
+                console.log("Caught!");
+            }
+        </script>
+    </body>
+</html>

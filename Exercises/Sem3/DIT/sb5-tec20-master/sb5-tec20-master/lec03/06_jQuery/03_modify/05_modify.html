@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script>
+	$(document).ready(() => {
+		/* WE WANT TO: 
+		 * 1. remove first LI element 
+		 *    see http://api.jquery.com/category/manipulation/dom-removal/
+		 * 2. then we insert a new <P> as last element of the UL */
+		// 1. 
+		let theElement = $('li').first();
+		let $itsParent = theElement.parent();
+		theElement.remove();
+		// 2.
+		$("<p>what's up!</p>").appendTo($itsParent);		
+		/*
+		// same thing can be done in this way:
+		$("<p>what's up!</p>").appendTo( $('li').first().parent() );
+		$('li').first().remove();
+		*/
+	});
+    </script>
+</head>
+<body>
+	<p>Ciao</p>
+	<ul>
+		<li>a</li>
+		<li>sub list:
+			<ul>
+				<li>x</li>
+				<li>y</li>
+			</ul>
+		</li>
+		<li>c</li>
+	</ul>
+</body>
+</html>

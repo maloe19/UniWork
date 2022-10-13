@@ -1,0 +1,24 @@
+[
+  {
+    "name":"xbox",
+    "manufracturer":"microsoft",
+    "price":100,
+    "Owners":[
+      {
+        "current_owner":"Charles",
+        "previous":"Bruce"
+      }
+    ]
+  },
+  {
+    "name":"playstation",
+    "manufracturer":"sony",
+    "price":200,
+    "Owners":[
+      {
+      "current_owner":"Clark",
+      "previous":"Barry"
+      }
+    ]
+  }
+]

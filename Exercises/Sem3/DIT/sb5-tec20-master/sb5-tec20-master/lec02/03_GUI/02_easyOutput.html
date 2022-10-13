@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+  // easy input AND OUTPUT using a form
+  // ... and this is DynamicHTML :D
+  let a = 0;
+  let b = 0;
+
+  function computeResult(){
+  //   console.log( a+b*10 );
+     let resultFieldElement = document.getElementById("resultField");
+     resultFieldElement.value = a+b*10 ;
+  }
+  </script>
+</head>
+<body>
+  <form>
+  Enter the value for a:
+  <input type="text" value="0" onchange="a=parseInt(this.value);">
+
+  <br/>
+  Enter the value for b:
+  <input type="text" value="0" onchange="b=parseInt(this.value);">
+
+  <br/>
+  <input type="button" value="Compute the result" onclick="computeResult();">
+
+  <hr>
+  The result of (a+b*10) is
+  <input type="text" value="0" id="resultField">
+  </form>
+</body>
+</html>

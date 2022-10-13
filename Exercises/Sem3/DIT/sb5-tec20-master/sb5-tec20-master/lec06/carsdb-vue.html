@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cars DB</title>
+    <style>
+        .theCar {
+            border-style: solid;
+            border-width: 1px;
+            color: blue;
+        }
+
+        .flex {
+            display: flex;
+            flex-direction: column;
+            max-width: 200px;
+        }
+
+        .flex>label {
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        .flex>input,
+        .flex>button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+
+        <h1>Car Page</h1>
+        <p>
+            <b>Here you can:</b>
+        </p>
+        <ul>
+            <li>add a new car, by typing producer and model name. Use a form with some buttons to do that.</li>
+            <li>refresh the list of existing cars (eventually after you have added a car). Make a button for that.</li>
+            <li>show some statistics (e.g., count) in a DIV somewhere in the page</li>
+        </ul>
+
+        <hr />
+        <div>
+            <form class="flex">
+                <label for="model">Producer</label>
+                <input type="text" v-model="producer" placeholder="Toyota" />
+                <label for="model">Model</label>
+                <input type="text" v-model="model" placeholder="Corona" />
+                <button type="button" @click="addCar()">Add</button>
+                <button type="button" @click="clearCars()">Clear</button>
+            </form>
+        </div>
+        <hr />
+        <div>
+            <ul id="listOfCars">
+                <car v-for="car in cars" :model="car.model" :producer="car.producer"></car>
+            </ul>
+        </div>
+        <hr />
+        <div id="carStatistics">
+            Cars in list: <span id="carCount" v-text="cars.length"></span>
+        </div>
+        <hr />
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js"
+        integrity="sha512-BKbSR+cfyxLdMAsE0naLReFSLg8/pjbgfxHh/k/kUC82Hy7r6HtR5hLhobaln2gcTvzkyyehrdREdjpsQwy2Jw=="
+        crossorigin="anonymous"></script>
+    <script>
+        Vue.component('car', {
+            props: ['producer', 'model'],
+            template: '<li><b>{{ producer }}:</b> {{ model }}</li>'
+        })
+        new Vue({
+            el: "#app",
+            data() {
+                return {
+                    cars: [],
+                    model: "",
+                    producer: ""
+                }
+            },
+            methods: {
+                addCar() {
+                    this.cars.push({
+                        model: this.model,
+                        producer: this.producer
+                    });
+                    this.model = "";
+                    this.producer = "";
+                    this.save();
+                },
+                save() {
+                    let cars = JSON.stringify(this.cars);
+                    localStorage.setItem("cars", cars);
+                },
+                clearCars() {
+                    this.cars = [];
+                    localStorage.removeItem("cars");
+                }
+            },
+            mounted() {
+                let cars = localStorage.getItem("cars");
+                if (cars == null)
+                    return;
+                this.cars = JSON.parse(cars);
+            }
+        })
+    </script>
+</body>
+
+</html>

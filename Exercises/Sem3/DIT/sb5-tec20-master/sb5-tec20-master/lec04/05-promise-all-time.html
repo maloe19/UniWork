@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            let start = Date.now();
+            // 4 promises, completing after 100,200,300 and 400 msec:
+            let a = [new Promise(r => setTimeout(() => r(1),100)),
+                     new Promise(r => setTimeout(() => r(2),200)),
+                     new Promise(r => setTimeout(() => r(3),300)),
+                     new Promise(r => setTimeout(() => r(4),400))];
+            Promise.all(a)
+              .then(res => console.log("time:", Date.now()-start));
+        </script>
+    </head>
+</html>

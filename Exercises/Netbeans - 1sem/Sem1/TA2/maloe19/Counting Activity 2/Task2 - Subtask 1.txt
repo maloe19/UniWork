@@ -1,0 +1,6 @@
+Task 2 - Subtask 1.
+In the following diagram (see the assignment in the pdf file), you see the network layout of an international company having customers in both USA and Denmark. The company has separate customer service for each country. In each country several databases are present containing Horizontal Partitions of the data created locally in that physical location. The boxes on the side explain how the data is partitioned between the physical locations. What are the benefits and drawbacks of this architecture choice? Is the right architecture for the company? Explain your reasoning. 
+
+-------------------------------------------------
+
+<<ANSWER HERE>> 

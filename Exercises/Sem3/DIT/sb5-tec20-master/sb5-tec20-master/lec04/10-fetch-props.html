@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            fetch("http://jsonplaceholder.typicode.com/users/1dsg")
+            .then(resp => {
+                    console.log(resp.status);
+                    console.log(resp.headers.get("Content-Type"));
+                    console.log('---------');
+                    resp.headers.forEach((v,k) => console.log(k,':',v))
+            })
+            //  200
+            //  application/json; charset=utf-8
+            //  ---------
+            //  cache-control : public, max-age=14400
+            //  content-type : application/json; charset=utf-8
+            //  expires : Mon, 24 Sep 2018 19:01:43 GMT
+            //  pragma : no-cache
+        </script>
+    </head>
+</html>

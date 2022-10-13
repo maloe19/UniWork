@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .selected {
+            background-color: #ff0000;
+            color: #0000ff;
+        }
+        .verySelected {
+            background-color: #0000FF;
+            color: #FF0000;
+        }
+        .even {
+            border-style: dotted;
+        }
+    </style>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+	   $(document).ready(function () {
+           $('li').filter(function () {
+               // DEBUG alert( this ); // it is an HTML LI Element
+               return (this.textContent.substr(0, 3) == "sub"); // starts with "sub"
+           }).addClass('selected');
+		
+           // other filtering methods
+           console.log( $('li').first() );
+           console.log( $('li').first().text() );
+           console.log( $('li').eq(0).text() ); // NOTE: elements are 0-based!
+           console.log( $('li').last().text() );
+           console.log( $('li').filter(".selected").text() ); // should be all LIs in the sub-UL list
+
+           console.log( $('li').not(".selected") ); // returns 4 LIs, all but <li>sub list: ... </li>
+           console.log( $('li').not(".selected").text() ); // same as above, but in text format
+		
+		/* To combine traversal methods, you can use chaining!
+		 * See here for a summary http://www.w3schools.com/jquery/jquery_ref_traversing.asp 
+		 */ 
+	});
+    </script>
+</head>
+<body>
+	<p>Ciao</p>
+	<ul>
+		<li>a</li>
+		<li>sub list:
+			<ul>
+				<li>x</li>
+				<li>y</li>
+			</ul>
+		</li>
+		<li>c</li>
+	</ul>
+</body>
+</html>

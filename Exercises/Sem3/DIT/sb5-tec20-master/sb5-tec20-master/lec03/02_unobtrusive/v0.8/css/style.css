@@ -1,0 +1,11 @@
+#theButton {
+	text-align: center;
+	color: white;
+	background-color: red;
+}
+
+body {
+	color: darkgray;
+	background-image:url(../imgs/fractal_10.jpg);
+	background-size: 100%;
+};

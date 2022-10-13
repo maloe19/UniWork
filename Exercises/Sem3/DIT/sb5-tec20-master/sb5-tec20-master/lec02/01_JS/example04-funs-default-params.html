@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Look at the console output...</p>
+<script>
+// from: http://eloquentjavascript.net/03_functions.html
+
+// assigning a function value
+let square = function(x) { return x * x; };
+
+// assigning another function value (with arrow syntax)
+square = (x) => x * x;
+
+console.log(square(3));    
+    
+function power(base, exponent = 2) {
+  let result = 1;
+  for (let count = 0; count < exponent; count++){
+    result *= base;
+  }
+  return result;
+}
+
+console.log(power(4)); 		// -> 16
+console.log(power(4, 3)); 	// -> 64
+// try this: console.log(power()); 	
+
+</script>
+</body>
+</html>

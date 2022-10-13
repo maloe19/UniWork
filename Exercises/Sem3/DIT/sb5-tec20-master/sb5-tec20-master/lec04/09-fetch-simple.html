@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            fetch("http://jsonplaceholder.typicode.com/users")
+            .then(resp => { if (resp.status == 200) { return resp.json() }
+                            else { throw new Error(resp) }})
+            .then(obj => console.log(obj))
+        </script>
+    </head>
+</html>

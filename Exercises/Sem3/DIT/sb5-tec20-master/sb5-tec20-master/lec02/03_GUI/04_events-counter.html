@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+    // interaction with HTML: events
+    let counter = 0;
+
+    function anotherOne(){
+        counter = counter + 1;
+        alert( "You clicked the second banana "+ counter + " times!" );
+    }
+    </script>
+
+    <p>
+        This is a banana.
+        <br/>
+        <img src="banana.jpg"/>
+    </p>
+    <hr/>
+    <p>
+        This is another banana. Try to click it.
+        <br/>
+        <img src="banana.jpg" onclick="anotherOne()"/>
+    </p>
+</body>
+</html>

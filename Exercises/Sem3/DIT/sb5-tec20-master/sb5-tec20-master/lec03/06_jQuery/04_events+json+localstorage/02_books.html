@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .button {
+            padding:5px;
+            background-color: #dcdcdc;
+            border: 1px solid #666;
+            color:#000;
+            text-decoration:none;
+        }
+        .myTableStyle {
+            border: 1px solid black;
+        }
+    </style>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script>
+	// === old page's data ===
+	class Data {
+        constructor() {
+		  this.books = [];
+        }
+        
+		addBook(bookTitle,description) {
+			this.books.push({title:bookTitle, descr:description});
+			this.storeAll();
+			this.generateTables();
+		}
+
+		loadAll() {
+			if (typeof(Storage) !== "undefined") {
+				// Retrieve the object from storage
+				let retrievedObject = localStorage.getItem('_books');
+				if (retrievedObject) {
+					this.books = JSON.parse(retrievedObject);
+				}
+			} else {
+				console.log("ERROR: No Web Storage support..");
+			}
+		}
+        
+		storeAll() {
+			if (typeof(Storage) !== "undefined") {
+				let clone = this.books.slice(0);
+				localStorage.setItem('_books', JSON.stringify(clone));
+			} else {
+				console.log("ERROR: No Web Storage support..");
+			}		
+		}
+        
+		generateTables() {
+			let $myBooksTable = $("#generated_book_table"); // OR $("table[id=generated_book_table]");
+			if ($myBooksTable) {
+				$myBooksTable.remove();
+			}
+			$myBooksTable = $("<table id='generated_book_table'></table>");
+			$myBooksTable.addClass("myTableStyle");
+			$("body").append($myBooksTable);
+			$myBooksTable.append( $("<tr>"+
+					"<th>book title</th>"+
+					"<th>description</th>"+
+					"</tr>") );
+			for (let i=0; i<this.books.length; i++) {
+				$myBooksTable.append( $("<tr>"+
+									"<td>"+this.books[i].title+"</td>"+
+									"<td>"+this.books[i].descr+"</td>"+
+									"</tr>") );
+			}
+			// this should be the final thing to apply, to involve all TDs in all tables
+			$("td").addClass("myTableStyle");
+		}
+		
+		reset() {
+			this.books = [];
+			this.storeAll();
+			this.generateTables();		
+			console.log( this.books );
+		}
+		
+		init() {
+			// init: load all data, and show them
+			this.loadAll();
+			console.log( this.books );
+			// build a table with books and actors, before continuing
+			this.generateTables();		
+		}
+	}
+
+	$(document).ready(function() {
+		// === initialization of data =================
+		let myData = new Data();	
+		myData.init();
+		
+		// === setup UI ===============================
+		$("form[id='bookData']").hide()
+		.submit(e => {
+			e.preventDefault();  
+			myData.addBook( $( "input[name='bookTitle']").val() ,
+			                $( "input[name='bookDecription']" ).val() );
+			$("form[id='bookData']").hide();
+		});
+        
+		$( "p:contains('book')" ).addClass("button").click(() => {
+			if ($("form[id='bookData']").is(":visible")){
+				$("form[id='bookData']").hide();
+			} else {
+				$("form[id='bookData']").show();
+			}
+		});
+		
+		$( "p:contains('reset')" ).addClass("button").click(() => {
+			// perhaps ask for confirmation before erasing!
+			console.log("RESETTING.... bzzzz");
+			alert("RESETTING.... bzzzz");
+			myData.reset();
+		});
+	});
+</script>
+
+<body>
+    <h1>Persistent localStorage: a book editor</h1>
+
+    <p>[add a book]</p>
+    <form id="bookData">
+        title: <input type="text" name="bookTitle">
+        description: <input type="text" name="bookDecription">
+        <input type="submit">
+    </form>
+
+    <p>[reset all]</p>
+</body>
+</html>

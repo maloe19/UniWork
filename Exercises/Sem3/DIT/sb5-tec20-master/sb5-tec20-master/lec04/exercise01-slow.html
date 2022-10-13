@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The sluggish page</title>
+    </head>
+    <body>
+        <input type="text"> length: <span id="length">0</span>
+        <script>
+        let text = document.querySelector("input");
+        let output = document.querySelector("#length");
+        text.addEventListener("input", () => {
+            output.innerText = text.value.length;
+            // SLOW ME
+        });
+        </script>
+    </body>
+</html>

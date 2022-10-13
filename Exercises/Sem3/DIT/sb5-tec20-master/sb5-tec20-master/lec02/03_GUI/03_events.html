@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+    // interaction with HTML: events
+    function myLittleFunction(){
+        console.log("myLittleFunction was just called");
+        alert( "Aha! you moved the mouse over the top banana." )
+    }
+
+    function anotherOne(){
+        console.log("the function \"anotherOne\" was just called");
+        alert( "Ok. Now you clicked the second banana: well done!" );
+    }
+</script>
+<p>
+    This is a banana. Try to move your mouse on top of it.
+    <br/>
+    <img src="banana.jpg" onmouseover="myLittleFunction()"/>
+</p>
+<hr/>
+<p>
+    This is another banana. Try to click it.
+    <br/>
+    <img src="banana.jpg" onclick="anotherOne()"/>
+</p>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <p>See console (and try reloading repeatedly)</p>
+        <script>
+            let start = Date.now();
+            setTimeout(() => {
+                console.log("Timeout ran at", Date.now() - start);
+            }, 20);                          //timeout after 20 msec
+            while (Date.now() < start + 50)
+                {}                            //loop for >= 50 msec
+            console.log("Wasted time until", Date.now() - start);
+            // Wasted time until 50
+            // Timeout ran at 51 (reported times vary with scheduling)
+        </script>
+    </body>
+</html>

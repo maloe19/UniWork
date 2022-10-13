@@ -1,0 +1,31 @@
+body{
+    background-color: #222222;
+    text-align: center;
+}
+h1{
+    color: #cee5da;
+}
+input{
+    background-color: #090808;
+    color: #999999;
+}
+#login{
+    background-color: #649e8a;
+    color: #cee5da;
+    margin-right: 15%;
+}
+#signup{
+    background-color: #314a58;
+    color: #cee5da;
+    margin-left: 15%;
+}
+form{
+    display: inline-block;
+    margin: auto;
+    margin-top: 10%;
+}
+#forgotPassword{
+    color: #cee5da;
+    font-size: 10px;
+    text-align: left;
+}

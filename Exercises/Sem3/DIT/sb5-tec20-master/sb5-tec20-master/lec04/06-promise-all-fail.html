@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            let start = Date.now();
+            // Now 5 promises, with one rejecting early:
+            let a = [new Promise(r => setTimeout(() => r(1),100)),
+                     new Promise(r => setTimeout(() => r(2),200)),
+                     Promise.reject("I'll fail"),
+                     new Promise(r => setTimeout(() => r(3),300)),
+                     new Promise(r => setTimeout(() => r(4),400))];
+            Promise.all(a)
+              .catch(res => console.log("time:", Date.now()-start));
+        </script>
+    </head>
+</html>

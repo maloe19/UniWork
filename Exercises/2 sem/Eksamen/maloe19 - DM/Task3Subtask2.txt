@@ -1,0 +1,11 @@
+1. Based on the interview results with John from “Make Me Mobile!” from Task 1 Subtask 1, should they use a relational database or NoSQL database? Explain your reasoning for why they should make that choice, and what the benefits would be to go in the other direction of your recommendation. 
+
+-De skulle bruge relationel database, da man der har mulighed for at lave relationer og associationer.
+
+2. Explain the difference between Horizontal and Vertical Partitioning/Sharding, and how the concept is different from Horizontal and Vertical Scaling.
+
+-Horizontal Partitioning/Sharding: Splitter man data op i tabeller hvor rækkene er længst og hvor der er flest kolonner.
+
+-Vertical Partitioning/Sharding: Splitter man data op i tabeller  hvor kolonnerne er længst og hvor der er flest rækker.
+
+-Forskel: Vertical scaling opgradere man, Horizantal scaling bliver mængden større.
